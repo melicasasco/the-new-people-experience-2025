@@ -7,9 +7,6 @@ export default function ClientsSection() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [animationActive, setAnimationActive] = useState(true)
 
-  // Función para pausar/reanudar la animación al pasar el mouse
-  const handleMouseEnter = () => setAnimationActive(false)
-  const handleMouseLeave = () => setAnimationActive(true)
 
   useEffect(() => {
     // Duplicar los logos para crear un efecto de carrusel infinito
@@ -21,18 +18,18 @@ export default function ClientsSection() {
 
   return (
     <section className=" ">
-      <div className="max-w-5xl mx-auto  h-fit">
+      <div className="w-full mx-auto  h-fit">
         <div className="flex justify-center mt-3 shadow-md ">
           <Image
             src="/clientes-title.svg"
             alt="CLIENTES"
             width={386}
             height={62}
-            className="w-full max-w-md object-contain hover-scale mb-10"
-          />
+            className="w-[340px] object-contain mb-9"
+            />
         </div>
 
-        <div className="overflow-hidden relative bg-[#FAFAFA]" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className="overflow-hidden relative bg-[#FAFAFA]" >
           <div
             ref={containerRef}
             className="flex space-x-16 py-8 whitespace-nowrap"
@@ -41,10 +38,9 @@ export default function ClientsSection() {
             }}
           >
             <div className="flex-shrink-0 flex items-center justify-center mx-8">
-              {/* Reemplazamos la imagen SVG vacía con una imagen de placeholder */}
               <img
-  src="/clientes-black.png"
-    alt="Logos de clientes"
+            src="/clientes-black.png"
+              alt="Logos de clientes"
                 className="h-16 object-contain"
               />
             </div>

@@ -101,7 +101,7 @@ body {
   }
   /* Separando las clases correctamente */
   p {
-    @apply text-[18px];
+    @apply text-[16px];
     @apply font-normal;
   }
 }
@@ -167,14 +167,14 @@ body {
 
 /* Hover effects */
 .hover-scale {
-  transition: transform 0.3s ease;
-}
+/*   transition: transform 0.3s ease;
+ */}
 
-.hover-scale:hover {
+/* .hover-scale:hover {
   transform: scale(1.05);
-}
+} */
 
-.hover-lift {
+/* .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -182,4 +182,4 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-
+ */

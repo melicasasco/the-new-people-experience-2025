@@ -10,29 +10,29 @@ export default function FlexibilitySection() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        width: "64.1rem",
+        width: "100%",
       }}
     >
-   <div className="max-w-5xl mx-auto shadow-md">
+   <div className="w-full mx-auto shadow-md">
             <div className=" mb-8 flex justify-start">
           <div className="relative z-20">
             <div className="inline-block px-3 py-1 mb-4">
              
             </div>
-            <div className="ml-12 mt-6">
+            <div className="md:ml-[200px] mt-6">
               <Image
                 src="/flexibilidad-nueva-norma.svg"
                 alt="EXPERIENCIA EMPLEADO de forma significativa y con impacto real"
                 width={400}
                 height={500}
-                className="w-full  hover-scale h-[120px]"
+                className="w-[340px] object-contain hover-scale"
                 priority
               />
             </div>
           </div>
         </div>
 
-        <div className="mb-12">
+        <div className="mb-12 md:mx-[80px]">
           <div className="text-3xl font-black text-center mb-12">
 
           <Image
@@ -81,9 +81,9 @@ export default function FlexibilitySection() {
           <Image
             src="/flexibilidad-flexibilidad.svg"
             alt="FLEXIBILIDAD repetido"
-            width={600}
-            height={200}
-            className="w-full pr-[400px]  left-0"
+            width={300}
+            height={100}
+            className="w-full pr-[400px]  left-0 "
           />
         </div>
       </div>

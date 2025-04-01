@@ -18,14 +18,14 @@ export default function Header() {
           <Image src="/be-logo.svg" alt="be People Experience" width={100} height={40} className="h-10 w-auto" />
         </Link>
         <nav>
-          <ul className="flex space-x-8">
+          <ul className="flex space-x-8 text-[16px] font-poppins">
             <li>
-              <a href="#hero" className="font-medium hover:text-yellow-300">
+              <a href="#hero" className="font-medium hover:text-[#b48cd4]">
                 HOME
               </a>
             </li>
             <li className="relative">
-              <button onClick={toggleCampaignsMenu} className="font-medium hover:text-yellow-300 flex items-center">
+              <button onClick={toggleCampaignsMenu} className="font-medium hover:text-[#b48cd4] flex items-center">
                 CAMPAÑAS
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ export default function Header() {
               )}
             </li>
             <li>
-              <a href="#contact" className="font-medium hover:text-yellow-300">
+              <a href="#contact" className="font-medium hover:text-[#b48cd4]">
                 CONTACTO
               </a>
             </li>

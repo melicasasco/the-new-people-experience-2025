@@ -4,10 +4,10 @@ import Link from "next/link"
 export default function ChristmasBoxSection() {
   return (
     <section id="christmas-box" className=" overflow-hidden">
-      <div className="max-w-5xl mx-auto shadow-md">
-        <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="w-full mx-auto shadow-md">
+        <div className="grid grid-cols-1 md:grid-cols-2 ">
           {/* Left side - Content */}
-          <div className="bg-white p-8 md:p-12 flex flex-col justify-center">
+          <div className="bg-white p-8 md:p-12 flex flex-col justify-center md:ml-[80px]">
             <div className="flex flex-col items-center">
               <div className="mb-8 w-full mx-auto flex justify-center">
                 <div className="w-full mx-auto max-w-md">
@@ -16,13 +16,13 @@ export default function ChristmasBoxSection() {
                     alt="LA CAJA NAVIDEÑA"
                     width={500}
                     height={150}
-                    className="w-full object-contain hover-scale mx-auto"
-                  />
+                    className="w-[340px] object-contain hover-scale"
+                    />
                 </div>
               </div>
 
               <div className="space-y-4 mb-8 text-center">
-                <p className="font-medium">
+                <p className="font-medium text-[16px]">
                   Uno de los momentos más especiales del año, y una de nuestras campañas preferidas.
                 </p>
                 <p className="font-bold">CHIN CHIN | Elegí tu caja</p>

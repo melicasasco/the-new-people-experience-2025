@@ -4,26 +4,26 @@ import Link from "next/link"
 export default function BirthdaySection() {
   return (
     <section id="birthday" className="">
-      <div className="max-w-5xl mx-auto shadow-md">
+      <div className="max-w-full mx-auto shadow-md">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch">
-          <div className="h-[500px] p-8 flex flex-col justify-center">
-            <div className="mb-6">
+          <div className="h-fit p-8 flex flex-col justify-center">
+            <div className="mb-6 md:ml-[80px]">
               <Image
                 src="/cumples-title.svg"
                 alt="LOS CUMPLEAÑOS"
                 width={500}
                 height={150}
-                className="w-full object-contain hover-scale"
-              />
+                className="w-[340px] object-contain hover-scale"
+                />
             </div>
 
-            <p className="mb-4">¡Momentos que se celebran!</p>
+            <p className="mb-4 text-[16px] md:ml-[80px]">¡Momentos que se celebran!</p>
 
-            <p className="mb-4">Activamos un saludo sorpresa en el día del cumpleaños de cada colaborador.</p>
+            <p className="mb-4 text-[16px] md:ml-[80px]">Activamos un saludo sorpresa en el día del cumpleaños de cada colaborador.</p>
 
-            <div className=" text-white px-4 py-2 mb-8 inline-block leading-none hover-scale text-sm font-bold">
-              <p className="bg-black tracking-wide w-fit pb-1 text-xl">¡Y TAMBIÉN LO INVITAMOS A QUE</p>
-              <p className="bg-black mt-1 w-fit text-xl" >ELIJA ALGO PARA CELEBRARLO!</p>
+            <div className=" text-white  py-2 mb-8 inline-block leading-none hover-scale text-sm font-bold md:ml-[80px]">
+              <p className="bg-black tracking-wide w-fit p-1 text-[16px]">¡Y TAMBIÉN LO INVITAMOS A QUE</p>
+              <p className="bg-black mt-1 w-fit text-[16px] p-1" >ELIJA ALGO PARA CELEBRARLO!</p>
             </div>
 
 
@@ -38,12 +38,12 @@ export default function BirthdaySection() {
           </div>
 
           <div className="bg-teal-400 h-[500px] p-8 flex items-center justify-center">
-            <div className="relative w-full h-full flex items-center justify-center">
+            <div className="relative w-full h-full flex items-center justify-center md:ml-[80px]">
               <Image
                   src="/cumples-mockup.svg"
                 alt="LOS CUMPLEAÑOS"
                 fill
-                className="object-contain hover-lift"
+                className="object-contain"
               />
             </div>
           </div>

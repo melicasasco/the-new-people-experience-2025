@@ -5,31 +5,31 @@ import ContactForm from "../ContactForm"
 export default function ContactSection() {
   return (
 <section id="contact" >
-<div className="bg-white shadow-md  h-fit max-w-5xl mx-auto">
-      <div className="max-w-5xl mx-auto  px-8">
+<div className="bg-white  h-fit w-full mt-8 mx-auto">
+      <div className="w-full mx-auto  px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start ">
           {/* Lado izquierdo - Título y logo */}
-          <div className="flex flex-col">
+          <div className="flex flex-col md:ml-[80px]">
             <div className="mb-12">
               <Image
                 src="/contactanos-title.svg"
                 alt="CONTACTANOS"
                 width={500}
                 height={150}
-                className="w-full max-w-md object-contain hover-scale"
+                className="w-[340px] object-contain hover-scale"
               />
             </div>
           </div>
 
           {/* Lado derecho - Formulario */}
-          <div className="">
+          <div className="md:mr-[80px]">
             <ContactForm />
           </div>
         </div>
       </div>
 
       {/* Footer con los elementos alineados según la imagen */}
-      <div className="max-w-5xl mx-auto px-6 md:px-12 mt-12 py-8 border-t ">
+      <div className="w-full mx-auto px-6 md:px-12 mt-12 py-8 md:mx-[80px] ">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <Link href="/" className="flex items-center hover-scale">
@@ -54,7 +54,7 @@ export default function ContactSection() {
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
               <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
             </svg>
-            <span>@bepeopleexperience</span>
+            <span className="md:mr-[80px]">@bepeopleexperience</span>
           </div>
         </div>
       </div>

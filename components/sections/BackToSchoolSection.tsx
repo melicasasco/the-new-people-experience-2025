@@ -4,7 +4,8 @@ import Link from "next/link"
 export default function BackToSchoolSection() {
   return (
     <section id="back-to-school" className=" overflow-hidden">
-      <div className="max-w-5xl mx-auto">
+      <div className="w-full ">
+      <div className="w-full mx-auto bg-[#b48cd4]">
       <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-0 items-stretch">
           {/* Left side - Image */}
           <div className="bg-gray-100 relative overflow-hidden">
@@ -16,24 +17,25 @@ export default function BackToSchoolSection() {
                 className="object-cover hover-lift"
               />
             </div>
+            
           </div>
 
           {/* Right side - Content */}
-          <div className="bg-[#B68AD4] p-8 md:p-12 flex flex-col justify-center">
+          <div className=" p-8 md:p-12 flex flex-col justify-center md:mr-[80px] ">
             <div>
-              <div className="mb-8">
+              <div className="mb-8 bg-[#b48cd4] mx-auto">
                 <Image
                   src="/vuelta-al-cole-title.svg"
                   alt="LA VUELTA AL COLE"
                   width={500}
                   height={150}
-                  className="w-full object-contain hover-scale"
-                />
+                  className="w-[340px] object-contain hover-scale mx-auto"
+                  />
               </div>
 
-              <div className="space-y-4 mb-8">
-                <p>Una de las campañas más valoradas por los empleados de las empresas.</p>
-                <p>
+              <div className="space-y-4 mb-8 text-[16px]">
+                <p className="text-[16px]">Una de las campañas más valoradas por los empleados de las empresas.</p>
+                <p className="text-[16px]">
                   Proponemos una vuelta al cole súper flexible donde cada colaborador puede{" "}
                   <strong>armar el kit escolar totalmente a medida</strong> o <strong>canjear su voucher</strong> en
                   tiendas especialmente seleccionadas.
@@ -51,6 +53,7 @@ export default function BackToSchoolSection() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   )

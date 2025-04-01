@@ -4,23 +4,23 @@ import Link from "next/link"
 export default function BirthsSection() {
   return (
     <section id="births" className=" overflow-hidden">
-      <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="w-full mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-[#ffff00]">
           {/* Left side - Content */}
-          <div className="bg-yellow-300 p-8 md:p-12 flex flex-col justify-center">
+          <div className="bg-yellow-300 p-8 md:p-12 flex flex-col justify-center md:ml-[80px]">
             <div className="mx-auto">
               <div className="mb-8">
                 <Image
                   src="/nacimientos-title.svg"
                   alt="LOS NACIMIENTOS"
-                  width={500}
+                  width={300}
                   height={150}
-                  className="w-full object-contain hover-scale"
-                />
+                  className="w-[340px] object-contain hover-scale"
+                  />
               </div>
 
               <div className="space-y-4 mb-8">
-                <p className="font-medium">
+                <p className="font-medium text-[16px]">
                   Cada familia es un mundo, y en esta campaña ofrecemos la posibilidad de que cada persona/familia pueda
                   elegir su regalo entre diferentes propuestas.
                 </p>
@@ -39,7 +39,7 @@ export default function BirthsSection() {
               <div className="flex justify-center w-full">
               <Link
                 href="/births"
-                className="inline-block border border-black rounded-full px-6 py-2 hover:bg-black hover:text-yellow-300 transition-colors hover-scale"
+                className="inline-block border border-black rounded-full mt-8 px-6 py-2 hover:bg-black hover:text-yellow-300 transition-colors hover-scale"
               >
                 + INFO SOBRE LA CAMPAÑA
               </Link></div>

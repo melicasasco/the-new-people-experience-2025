@@ -63,7 +63,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={()=>console.log("handleInputChange")}
           placeholder="Nombre y Apellido"
-          className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black"
+          className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-text-[16px] text-[16px]"
           required
           disabled={isSubmitting}
         />
@@ -76,7 +76,7 @@ export default function ContactForm() {
           value={formData.company}
           onChange={()=>console.log("handleInputChange")}
           placeholder="Empresa"
-          className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black"
+          className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-text-[16px] text-[16px]"
           required
           disabled={isSubmitting}
         />
@@ -89,7 +89,7 @@ export default function ContactForm() {
           value={formData.campaign}
           onChange={()=>console.log("handleInputChange")}
           placeholder="Campaña de interés"
-          className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black"
+          className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-text-[16px] text-[16px]"
           required
           disabled={isSubmitting}
         />
@@ -102,7 +102,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={()=>console.log("handleInputChange")}
           placeholder="Email"
-          className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black"
+          className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-text-[16px] text-[16px]"
           required
           disabled={isSubmitting}
         />
@@ -123,7 +123,7 @@ export default function ContactForm() {
       <div className="flex justify-end">
         <button
           type="submit"
-          className="border border-black rounded-full px-8 py-2 hover:bg-black hover:text-white transition-colors hover-scale"
+          className="border border-black rounded-full px-8 py-2 hover:bg-black hover:text-white transition-colors hover-scale text-[16px]"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Enviando..." : "Enviar"}

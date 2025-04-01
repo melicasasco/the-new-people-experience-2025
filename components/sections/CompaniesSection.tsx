@@ -15,10 +15,10 @@ export default function CompaniesSection() {
   }, [])
 
   return (
-    <div className="max-w-5xl mx-auto  ">
+    <div className="w-full mx-auto  ">
 
       <section className="py-12 bg-[#1A1A1A] text-white">
-        <div className="max-w-5xl mx-auto ">
+        <div className=" mx-auto ">
           <div className="flex justify-center mb-10">
 
             <Image
