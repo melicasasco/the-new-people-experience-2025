@@ -19,13 +19,13 @@ export default function FlexibilitySection() {
             <div className="inline-block px-3 py-1 mb-4">
              
             </div>
-            <div className="md:ml-[200px] mt-6">
+            <div className="md:ml-[120px] mt-6">
               <Image
                 src="/flexibilidad-nueva-norma.svg"
                 alt="EXPERIENCIA EMPLEADO de forma significativa y con impacto real"
                 width={400}
                 height={500}
-                className="w-[340px] object-contain hover-scale"
+                className="w-[340px] object-contain hover-scale md:ml-0 ml-[30px]"
                 priority
               />
             </div>

@@ -19,7 +19,7 @@ export default function BirthsSection() {
                   />
               </div>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 mb-8 md:mr-8">
                 <p className="font-medium text-[16px]">
                   Cada familia es un mundo, y en esta campaña ofrecemos la posibilidad de que cada persona/familia pueda
                   elegir su regalo entre diferentes propuestas.
@@ -27,7 +27,7 @@ export default function BirthsSection() {
               </div>
 
               {/* Partner logos */}
-              <div className="">
+              <div className="md_mr-8">
                 <Image
                   src="/nacimientos-marcas.svg"
                   alt="Marcas partners de nacimientos"
@@ -36,10 +36,10 @@ export default function BirthsSection() {
                   className="object-contain"
                 />
               </div>
-              <div className="flex justify-center w-full">
+              <div className="flex justify-center w-full md:mr-8">
               <Link
                 href="/births"
-                className="inline-block border border-black rounded-full mt-8 px-6 py-2 hover:bg-black hover:text-yellow-300 transition-colors hover-scale"
+                className="font-matahari inline-block border border-black rounded-full mt-8 px-6 pt-2 pb-1 hover:bg-black hover:text-yellow-300 transition-colors hover-scale md:mr-[80px] text-[22px] "
               >
                 + INFO SOBRE LA CAMPAÑA
               </Link></div>

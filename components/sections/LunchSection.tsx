@@ -8,34 +8,35 @@ export default function LunchSection() {
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-0 items-stretch">
           {/* Left side - Image - Reemplazada con un div de color */}
 
-          <div className="relative w-full h-[500px] bg-[#fb5434]">
-            <Image
+
+            <div className="relative w-full h-[560px] ">
+             <Image
               src="/lunchh.svg"
               alt="LOS ALMUERZOS"
               fill
-              className="object-right object-contain "
-            />
-          </div>
+              className="object-cover object-left "
+              />
+             </div>
 
           {/* Right side - Content */}
-          <div className="bg-[#333333] text-white h-[500px] px-8 flex flex-col justify-center">
+          <div className="bg-[#333333] text-white h-[560px] px-4 flex flex-col justify-center">
             <div className="flex flex-col items-center">
               {/* Título centrado - Ajustado para que quede más abajo y dentro del contenedor */}
               <div className="mb-4 w-full flex justify-center mt-12">
-                <div className="w-full  flex justify-center">
+                <div className="w-full md:ml-[110px]">
                   <h2 className="text-2xl font-bold">
                     <Image
-                  src="/los-almuerzos-titulo.svg"
-                  alt="LOS ALMUERZOS"
+                      src="/los-almuerzos-titulo.svg"
+                      alt="LOS ALMUERZOS"
                       width={300}
                       height={850}
-                      className="w-[240px] object-contain hover-scale"
+                      className="w-[240px] object-contain hover-scale ml-[30px] md:ml-0"
                       />
                   </h2>
                 </div>
               </div>
 
-              <div className="space-y-8 mb-4  px-8">
+              <div className="space-y-8 mb-4 md:ml-[80px] md:mr-[60px] px-8">
                 <p className=" text-[16px]">
                   Los colaboradores reciben créditos para poder elegir sus
                   almuerzos. La campaña se calendariza de acuerdo a las
@@ -53,7 +54,7 @@ export default function LunchSection() {
               <div className="flex justify-center w-full mb-8">
                 <Link
                   href="/lunch"
-                  className="inline-block border border-white rounded-full mb-4 px-6 py-2 hover:bg-white hover:text-[#333333] transition-colors hover-scale"
+                  className="font-matahari inline-block border border-white rounded-full mb-4 px-6 pt-2 pb-1  hover:bg-white hover:text-[#333333] transition-colors hover-scale md:mt-6 text-[22px]"
                 >
                   + INFO SOBRE LA CAMPAÑA
                 </Link>

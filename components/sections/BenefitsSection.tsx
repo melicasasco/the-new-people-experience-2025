@@ -16,7 +16,7 @@ export default function BenefitsSection() {
     >
       <div className="w-full  px-6 md:px-12 mx-auto px-6 md:px-12 relative z-10 shadow-md">
 
-        <div className="mb-6 w-[400px] mt-10 ml-20 ">
+        <div className="mb-6 w-[400px] mt-10 md:ml-20 ml-0 ">
               <Image
                 src="/beneficios-con-impacto-real-title.svg"
             alt="BENEFICIOS CON IMPACTO REAL"

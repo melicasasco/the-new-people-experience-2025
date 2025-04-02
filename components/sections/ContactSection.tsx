@@ -29,11 +29,11 @@ export default function ContactSection() {
       </div>
 
       {/* Footer con los elementos alineados según la imagen */}
-      <div className="w-full mx-auto px-6 md:px-12 mt-12 py-8 md:mx-[80px] ">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="w-full mx-auto px-6 md:px-12 py-8 md:mx-[80px] ">
+        <div className="flex flex-col md:flex-row justify-start md:gap-[50px] md:items-center">
           <div className="flex items-center mb-4 md:mb-0">
-            <Link href="/" className="flex items-center hover-scale">
-              <Image src="/be-logo.svg" alt="be People Experience" width={100} height={40} className="h-10 w-auto" />
+            <Link href="/" className="flex md:items-center  hover-scale">
+              <Image src="/bottom-logo.svg" alt="be People Experience" width={200} height={40} className=" w-auto w-[400px]" />
             </Link>
           </div>
 
@@ -54,7 +54,7 @@ export default function ContactSection() {
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
               <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
             </svg>
-            <span className="md:mr-[80px]">@bepeopleexperience</span>
+            <span className="md:mr-[80px]"><a href="https://www.instagram.com/bepeopleexperience/" target="_blank" className="text-black">@bepeopleexperience</a></span>
           </div>
         </div>
       </div>

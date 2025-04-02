@@ -21,8 +21,8 @@ export default function ChristmasBoxSection() {
                 </div>
               </div>
 
-              <div className="space-y-4 mb-8 text-center">
-                <p className="font-medium text-[16px]">
+              <div className="space-y-4 mb-8 flex flex-col justify-start">
+                <p className="font-medium text-[16px] text-left">
                   Uno de los momentos más especiales del año, y una de nuestras campañas preferidas.
                 </p>
                 <p className="font-bold">CHIN CHIN | Elegí tu caja</p>
@@ -39,10 +39,10 @@ export default function ChristmasBoxSection() {
                 />
               </div>
 
-              <div className="flex justify-center w-full">
+              <div className="flex justify-center w-full md:mr-10">
                 <Link
                   href="/christmas"
-                  className="inline-block border border-black rounded-full px-6 py-2 hover:bg-black hover:text-white transition-colors hover-scale"
+                  className="font-matahari inline-block border border-black rounded-full px-6 pt-2 pb-1  hover:bg-black hover:text-white transition-colors hover-scale text-[22px]"
                 >
                   + INFO SOBRE LA CAMPAÑA
                 </Link>

@@ -7,18 +7,18 @@ export default function ChildrensDaySection() {
       <div className="w-full ">
       <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-0 items-stretch bg-[#d42c2c] ">
           {/* Left side - Image */}
-          <div className="relative w-full h-[510px]">
+          <div className="relative w-full h-[500px]">
             <Image
               src="/infancias-mockup.svg"
               alt="LAS INFANCIAS"
               fill
-              className="object-cover hover-lift"
+              className="w-[100px] object-cover hover-lift"
             />
           </div>
 
           {/* Right side - Content */}
-          <div className="bg-[#D62828] text-white p-8 md:px-12 py-4 flex flex-col md:mr-[80px]">
-            <div className="">
+          <div className="bg-[#D62828] text-white p-8 md:px-12 pt-10 flex flex-col md:mr-[80px]">
+            <div className="md:ml-10 md_mt-4">
               <div className="mb-8  flex justify-start w-full">
                 <Image
                   src="/infancias-title.svg"
@@ -55,7 +55,7 @@ export default function ChildrensDaySection() {
               <div className="flex justify-center w-full">
               <Link
                 href="/childrens-day"
-                className="inline-block border border-white rounded-full px-6 py-2 hover:bg-white hover:text-[#D62828] transition-colors hover-scale"
+                className=" font-matahari inline-block border border-white rounded-full px-6 pt-2 pb-1  hover:bg-white hover:text-[#D62828] transition-colors hover-scale text-[22px]"
               >
                 + INFO SOBRE LA CAMPAÑA
               </Link></div>

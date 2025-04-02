@@ -9,7 +9,7 @@ export default function BackToSchoolSection() {
       <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-0 items-stretch">
           {/* Left side - Image */}
           <div className="bg-gray-100 relative overflow-hidden">
-            <div className="relative w-full h-full min-h-[500px]">
+            <div className="relative w-full h-full min-h-[600px]">
               <Image
                 src="/vuelta-al-cole-mockup.svg"
                 alt="Tablet con aplicación de vuelta al cole"
@@ -21,7 +21,7 @@ export default function BackToSchoolSection() {
           </div>
 
           {/* Right side - Content */}
-          <div className=" p-8 md:p-12 flex flex-col justify-center md:mr-[80px] ">
+          <div className=" p-8  flex flex-col justify-center ">
             <div>
               <div className="mb-8 bg-[#b48cd4] mx-auto">
                 <Image
@@ -33,7 +33,7 @@ export default function BackToSchoolSection() {
                   />
               </div>
 
-              <div className="space-y-4 mb-8 text-[16px]">
+              <div className="space-y-4 mb-8 text-[16px]  md:px-[90px]">
                 <p className="text-[16px]">Una de las campañas más valoradas por los empleados de las empresas.</p>
                 <p className="text-[16px]">
                   Proponemos una vuelta al cole súper flexible donde cada colaborador puede{" "}
@@ -45,7 +45,7 @@ export default function BackToSchoolSection() {
               <div className="flex justify-center w-full mt-8">
                 <Link
                   href="/back-to-school"
-                  className="inline-block border border-black rounded-full px-6 py-2 hover:bg-black hover:text-[#B68AD4] transition-colors hover-scale"
+                  className="inline-block border border-black rounded-full px-6 pt-2 pb-1  hover:bg-black hover:text-[#B68AD4] transition-colors hover-scale font-matahari text-[22px]"
                 >
                   + INFO SOBRE LA CAMPAÑA
                 </Link>
