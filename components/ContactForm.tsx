@@ -1,97 +1,155 @@
 "use client"
-
-import { useState } from "react"
+import confetti from "canvas-confetti"
+import { useEffect, useRef, useState } from "react"
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    campaign: "",
-    email: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
-  const [submitError, setSubmitError] = useState("")
+  const formRef = useRef<HTMLFormElement>(null)
+  const [submitted, setSubmitted] = useState(false)
 
-/*   const handleInputChange = (e) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-  } */
-
-/*   const handleSubmit = async (e) => {
+/*   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitError("")
 
-    try {
-      const response = await fetch("/api/contact", {
+    const form = formRef.current
+    if (!form) return
+
+    // Usamos Formsubmit manualmente
+    const formData = new FormData(form);
+
+      fetch("https://formsubmit.co/ajax/545acec691ecf7a86b56ebb75f2716", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.get("name"),
+          company: formData.get("empresa"),
+          campaign: formData.get("campania"),
+          email: formData.get("email"),
+        }),
       })
-
-      const data = await response.json()
-
-      if (!response.ok) {
-        throw new Error(data.error || "Error al enviar el formulario")
-      }
-
-      setSubmitSuccess(true)
-      setFormData({ name: "", company: "", campaign: "", email: "" })
-
-      // Resetear el mensaje de éxito después de 5 segundos
-      setTimeout(() => setSubmitSuccess(false), 5000)
-    } catch (error) {
-      console.error("Error al enviar el formulario:", error)
-      setSubmitError(error.message || "Ocurrió un error al enviar el formulario. Por favor, inténtalo de nuevo.")
-    } finally {
-      setIsSubmitting(false)
-    }
+      .then((res) => res.json())
+      .then(() => {
+        setSubmitted(true)
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+        })
+        form.reset()
+      })
+      .catch((err) => {
+        alert("Error al enviar. Intentalo de nuevo.")
+        console.error(err)
+      })
   } */
 
+      const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault()
+      
+        const form = formRef.current
+        if (!form) return
+      
+        const formData = new FormData(form)
+        console.log(formData,'formData')
+        const data = {
+          name: formData.get("name"),
+          company: formData.get("empresa"),
+          campaign: formData.get("campania"),
+          email: formData.get("email"),
+        }
+      console.log(data,'data form')
+        // 1️⃣ Enviar email con Formsubmit
+        fetch("https://formsubmit.co/ajax/melaniecasasco@gmail.com", {
+          method: "POST",
+          body: formData,
+        })
+          .then((res) => res.json())
+          .then(() => {
+            console.log("✅ Email enviado con Formsubmit")
+          })
+          .catch((err) => {
+            alert("Error al enviar el email.")
+            console.error(err)
+          })
+      
+        // 2️⃣ Guardar en Google Sheets
+/*         fetch("https://script.google.com/macros/s/AKfycbyG5ZjLBGrAXiwaJdEH24aJfKglbj79Nq7sBLkKkfC65Q3W9UWshzrVA4AwN2eHUx0plg/exec", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }) */
+          fetch("/api/send-to-sheet", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          })
+          .then((res) => res.json())
+          .then(() => {
+            console.log("✅ Datos guardados en Google Sheets")
+            setSubmitted(true)
+            confetti({
+              particleCount: 100,
+              spread: 70,
+              origin: { y: 0.6 },
+            })
+            form.reset()
+          })
+          .catch((err) => {
+            alert("Error al guardar en Google Sheets.")
+            console.error(err)
+          })
+      }
+
+      
+  useEffect(() => {
+    if (submitted) {
+      const timeout = setTimeout(() => setSubmitted(false), 4000);
+      return () => clearTimeout(timeout);
+    }
+  }, [submitted]);
+
   return (
-    <form onSubmit={()=> console.log("handleSubmit")} className="space-y-8">
+    <>
+    <form
+    ref={formRef}
+    onSubmit={handleSubmit}
+      className="space-y-8"
+    >
+      {/* Anti-captcha y redirección (opcional) */}
+      <input type="hidden" name="_captcha" value="false" />
+
       <div>
         <input
           type="text"
           name="name"
-          value={formData.name}
-          onChange={()=>console.log("handleInputChange")}
           placeholder="Nombre y Apellido"
           className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-text-[16px] text-[16px]"
           required
-          disabled={isSubmitting}
         />
       </div>
 
       <div>
         <input
           type="text"
-          name="company"
-          value={formData.company}
-          onChange={()=>console.log("handleInputChange")}
+          name="empresa"
           placeholder="Empresa"
           className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-text-[16px] text-[16px]"
           required
-          disabled={isSubmitting}
         />
       </div>
 
       <div>
         <input
           type="text"
-          name="campaign"
-          value={formData.campaign}
-          onChange={()=>console.log("handleInputChange")}
+          name="campania"
           placeholder="Campaña de interés"
           className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-text-[16px] text-[16px]"
           required
-          disabled={isSubmitting}
         />
       </div>
 
@@ -99,37 +157,27 @@ export default function ContactForm() {
         <input
           type="email"
           name="email"
-          value={formData.email}
-          onChange={()=>console.log("handleInputChange")}
           placeholder="Email"
           className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-black placeholder-text-[16px] text-[16px]"
           required
-          disabled={isSubmitting}
         />
       </div>
-
-      {submitSuccess && (
-        <div className="pt-4">
-          <span className="text-green-600">¡Mensaje enviado con éxito! Te contactaremos pronto.</span>
-        </div>
-      )}
-
-      {submitError && (
-        <div className="pt-4">
-          <span className="text-red-600">{submitError}</span>
-        </div>
-      )}
 
       <div className="flex justify-end">
         <button
           type="submit"
           className="border border-black rounded-full px-8 py-2 hover:bg-black hover:text-white transition-colors hover-scale text-[16px]"
-          disabled={isSubmitting}
         >
-          {isSubmitting ? "Enviando..." : "Enviar"}
+          Enviar
         </button>
       </div>
     </form>
+    {submitted && (
+      <div className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 animate-fadeIn">
+        <div className="bg-yellow-300 border-4 border-yellow-500 rounded-xl px-6 py-4 text-black font-semibold shadow-lg">
+          🎉 ¡Formulario enviado exitosamente!
+        </div>
+      </div>
+    )}</>
   )
 }
-
