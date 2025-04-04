@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion";
 
 export default function BirthsSection() {
   return (
@@ -8,14 +9,20 @@ export default function BirthsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 bg-[#ffff00]">
           {/* Left side - Content */}
           <div className="bg-yellow-300 p-8 md:p-12 flex flex-col justify-center md:ml-[80px]">
-            <div className="mx-auto">
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
+            className="mx-auto "
+          >
               <div className="mb-8">
                 <Image
                   src="/nacimientos-title.svg"
                   alt="LOS NACIMIENTOS"
                   width={300}
                   height={150}
-                  className="w-[340px] object-contain hover-scale"
+                  className="w-[340px] object-contain hover-scale  hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
                   />
               </div>
 
@@ -39,23 +46,31 @@ export default function BirthsSection() {
               <div className="flex justify-center w-full md:mr-8">
               <Link
                 href="/births"
-                className="font-matahari inline-block border border-black rounded-full mt-8 px-6 pt-2 pb-1 hover:bg-black hover:text-yellow-300 transition-colors hover-scale md:mr-[80px] text-[22px] "
+                className="font-matahari inline-block border border-black rounded-full mt-8 px-6 pt-2 pb-1 hover:bg-black hover:text-yellow-300 transition-colors hover-scale md:mr-[80px] md:text-[22px] text-[16px]"
               >
                 + INFO SOBRE LA CAMPAÑA
               </Link></div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right side - Image */}
                    
-          <div className="relative w-full h-[500px]">
+          <motion.div
+              initial={{ opacity: 0, x: 80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8 }}
+              className="relative w-full h-[600px]"
+            >
+          
             <Image
               src="/nacimientos-mockup.svg"
               alt="LOS NACIMIENTOS"
               fill
               className="object-cover hover-lift"
             />
-          </div>
+          </motion.div>
+
         </div>
       </div>
     </section>

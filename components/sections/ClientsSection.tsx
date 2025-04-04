@@ -17,47 +17,53 @@ export default function ClientsSection() {
   }, [])
 
   return (
-    <section className=" ">
+    <section className=" mt-4 ">
       <div className="w-full mx-auto  h-fit">
-        <div className="flex justify-center mt-3 shadow-md ">
+        <div className="flex justify-center mt-3">
           <Image
             src="/clientes-title.svg"
             alt="CLIENTES"
             width={386}
             height={62}
-            className="w-[340px] object-contain mb-9"
+            className="w-[340px] object-contain mb-3 mt-6"
             />
         </div>
 
-        <div className="overflow-hidden relative bg-[#FAFAFA]" >
-          <div
-            ref={containerRef}
-            className="flex space-x-16 py-8 whitespace-nowrap"
-            style={{
-              animation: animationActive ? "scroll 30s linear infinite" : "none",
-            }}
-          >
-            <div className="flex-shrink-0 flex items-center justify-center mx-8">
-              <img
-            src="/clientes-black.png"
-              alt="Logos de clientes"
-                className="h-16 object-contain"
-              />
-            </div>
-          </div>
-        </div>
+       <div className="overflow-hidden relative bg-[#FAFAF8] mt-4">
+                  <div
+                    className="flex pt-4 pb-1 whitespace-nowrap animate-scroll"
+                    style={{ width: "max-content" }}
+                  >
+                    {/* Repetimos la misma imagen varias veces para que el scroll sea fluido */}
+                    {[...Array(3)].map((_, i) => (
+                      <Image
+                        key={i}
+                        src="/logos-black-new.png"
+                        alt={`Carrusel de logos ${i}`}
+                        width={1000} // Ajustalo si tu imagen es más grande o más chica
+                        height={100}
+                        className="h-20 w-auto object-contain flex-shrink-0"
+                        priority
+                      />
+                    ))}
+                  </div>
+                </div>
       </div>
 
       <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-33.3333%);
+            }
           }
-          100% {
-            transform: translateX(-50%);
+
+          .animate-scroll {
+            animation: scroll 50s linear infinite;
           }
-        }
-      `}</style>
+        `}</style>
     </section>
   )
 }

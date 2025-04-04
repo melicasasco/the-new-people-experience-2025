@@ -60,7 +60,7 @@ export default function ContactForm() {
         }
       console.log(data,'data form')
         // 1️⃣ Enviar email con Formsubmit
-        fetch("https://formsubmit.co/ajax/melaniecasasco@gmail.com", {
+        fetch("https://formsubmit.co/ajax/hello@beinspiringtools.com", {
           method: "POST",
           body: formData,
         })
@@ -81,28 +81,28 @@ export default function ContactForm() {
           },
           body: JSON.stringify(data),
         }) */
-          fetch("/api/send-to-sheet", {
+          fetch("https://script.google.com/macros/s/AKfycbz83AuNNnJbUlLkH3pmmQXqlbta-Y1Mkj4J9bNcnBH9oJYY-tSSC96eV2hP1GC5B46wYQ/exec", {
             method: "POST",
+            mode: "no-cors", // 👈 evita error CORS
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(data),
           })
-          .then((res) => res.json())
-          .then(() => {
-            console.log("✅ Datos guardados en Google Sheets")
-            setSubmitted(true)
-            confetti({
-              particleCount: 100,
-              spread: 70,
-              origin: { y: 0.6 },
+            .then(() => {
+              console.log("✅ Datos enviados a Google Sheets")
+              setSubmitted(true)
+              confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 },
+              })
+              form.reset()
             })
-            form.reset()
-          })
-          .catch((err) => {
-            alert("Error al guardar en Google Sheets.")
-            console.error(err)
-          })
+            .catch((err) => {
+              alert("Error al enviar a Google Sheets.")
+              console.error(err)
+            })
       }
 
       
@@ -116,9 +116,10 @@ export default function ContactForm() {
   return (
     <>
     <form
+     id="contact-form"
     ref={formRef}
     onSubmit={handleSubmit}
-      className="space-y-8"
+    className="space-y-8"
     >
       {/* Anti-captcha y redirección (opcional) */}
       <input type="hidden" name="_captcha" value="false" />
@@ -162,22 +163,81 @@ export default function ContactForm() {
           required
         />
       </div>
-
-      <div className="flex justify-end">
-        <button
-          type="submit"
-          className="border border-black rounded-full px-8 py-2 hover:bg-black hover:text-white transition-colors hover-scale text-[16px]"
-        >
-          Enviar
-        </button>
-      </div>
     </form>
     {submitted && (
-      <div className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50 animate-fadeIn">
-        <div className="bg-yellow-300 border-4 border-yellow-500 rounded-xl px-6 py-4 text-black font-semibold shadow-lg">
+     /*  <div className="fixed inset-0 flex items-center justify-center z-50">
+        <div className="bg-yellow-300 border border-yellow-500 rounded-xl px-6 py-4 text-black font-semibold shadow-lg animate-fadeIn text-center max-w-[90%] w-full md:w-auto">
           🎉 ¡Formulario enviado exitosamente!
         </div>
+      </div> */
+      <div className="fixed inset-0 flex items-center justify-center z-50">
+      <div className="relative rounded-xl overflow-hidden w-full max-w-[90%] md:max-w-[400px] h-[8rem] flex items-center justify-center bg-white border border-yellow-500 shadow-2xl animate-fadeIn text-center text-black font-semibold text-xl md:text-2xl px-3 py-6">
+        
+        {/* Partículas mágicas */}
+        {[...Array(15)].map((_, i) => (
+          <span
+            key={i}
+            className="particle"
+            style={{
+              top: `${Math.random() * 80 + 10}%`, // evita que toquen bordes
+              left: `${Math.random() * 80 + 10}%`,
+              animationDelay: `${Math.random() * 2}s`,
+            }}
+          >
+            {Math.random() > 0.5 ? "✨" : "🎊"}
+          </span>
+        ))}
+    
+        <span className="text-[16px] z-50 bg-opacity-5	 bg-white p-2">🎉 ¡Formulario enviado exitosamente! ✨</span>
+    
+        {/* Estilos mágicos */}
+        <style jsx global>{`
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: scale(0.95);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+    
+          .animate-fadeIn {
+            animation: fadeIn 0.4s ease-out;
+          }
+    
+          .particle {
+            position: absolute;
+            font-size: 1rem;
+            opacity: 0;
+            animation: float 3s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 10;
+          }
+    
+          @keyframes float {
+            0% {
+              transform: translateY(0) scale(1);
+              opacity: 0;
+            }
+            20% {
+              opacity: 1;
+            }
+            80% {
+              opacity: 1;
+            }
+            100% {
+              transform: translateY(-50px) scale(0.8);
+              opacity: 0;
+            }
+          }
+        `}</style>
       </div>
-    )}</>
+    </div>
+    
+    )}
+
+    </>
   )
 }

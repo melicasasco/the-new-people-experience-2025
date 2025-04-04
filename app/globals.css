@@ -192,3 +192,15 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
  */
+
+ @keyframes colorFlash {
+  0% { color: #000000; }
+  25% { color: #B68AD4; }
+  50% { color: #ef512c; }
+  75% { color: #FEE440; }
+  100% { color: #000000; }
+}
+
+.hover\\:animate-colorFlash:hover {
+  animation: colorFlash 0.6s linear infinite;
+}

@@ -1,26 +1,13 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { useEffect, useRef } from "react"
+import Image from "next/image";
 
 export default function CompaniesSection() {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    // Duplicar los logos para crear un efecto de carrusel infinito
-    if (containerRef.current) {
-      const originalContent = containerRef.current.innerHTML
-      containerRef.current.innerHTML = originalContent + originalContent
-    }
-  }, [])
-
   return (
-    <div className="w-full mx-auto  ">
-
+    <div className="w-full mx-auto">
       <section className="py-12 bg-[#1A1A1A] text-white">
-        <div className=" mx-auto ">
+        <div className="mx-auto">
           <div className="flex justify-center mb-10">
-
             <Image
               src="/empresas-nos-eligen.svg"
               alt="Empresas nos eligen"
@@ -33,39 +20,40 @@ export default function CompaniesSection() {
 
           <div className="overflow-hidden relative">
             <div
-              ref={containerRef}
-              className="flex space-x-16 py-4 whitespace-nowrap"
-              style={{
-                animation: "scroll 30s linear infinite"
-              }}
+              className="flex pt-4 pb-1 whitespace-nowrap animate-scroll"
+              style={{ width: "max-content" }}
             >
-              <div className="flex-shrink-0 flex items-center justify-center mx-8">
-                <div className="text-white text-lg">
-                  <Image
-                    src="/logos-blancos.png"
-                    alt="Empresas nos eligen"
-                    width={300}
-                    height={200}
-                    className="w-full object-contain h-20"
-                    priority
-                  /></div>
-              </div>
+              {/* Repetimos la misma imagen varias veces para que el scroll sea fluido */}
+              {[...Array(3)].map((_, i) => (
+                <Image
+                  key={i}
+                  src="/logos-blancos-new.png"
+                  alt={`Carrusel de logos ${i}`}
+                  width={1000} // Ajustalo si tu imagen es más grande o más chica
+                  height={100}
+                  className="h-20 w-auto object-contain flex-shrink-0"
+                  priority
+                />
+              ))}
             </div>
           </div>
         </div>
 
         <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-33.3333%);
+            }
           }
-          100% {
-            transform: translateX(-50%);
+
+          .animate-scroll {
+            animation: scroll 50s linear infinite;
           }
-        }
-      `}</style>
+        `}</style>
       </section>
     </div>
-  )
+  );
 }
-

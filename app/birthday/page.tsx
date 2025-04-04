@@ -25,7 +25,7 @@ export default function BirthdayTrendsPage() {
       <Header />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-8">
-        <div className="mb-6">
+        <div className="">
           <button
             onClick={handleBack}
             className="inline-flex items-center text-black hover:text-gray-700 transition-colors"

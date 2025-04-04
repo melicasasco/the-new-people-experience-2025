@@ -7,7 +7,7 @@ export default function BenefitsSection() {
     <section
       className="bg-white relative overflow-hidden"
       style={{
-        backgroundImage: 'url("/beneficios-con-impacto-bg.png")',
+        backgroundImage: 'url("/impacto.svg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -16,13 +16,13 @@ export default function BenefitsSection() {
     >
       <div className="w-full  px-6 md:px-12 mx-auto px-6 md:px-12 relative z-10 shadow-md">
 
-        <div className="mb-6 w-[400px] mt-10 md:ml-20 ml-0 ">
+        <div className="mb-6  mt-10 md:ml-20 ml-0 ">
               <Image
                 src="/beneficios-con-impacto-real-title.svg"
             alt="BENEFICIOS CON IMPACTO REAL"
                 width={500}
                 height={150}
-                className="w-[340px] object-contain hover-scale"
+                className="w-[640px] object-contain hover-scale  hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out  hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
               />
             </div>
         
@@ -39,7 +39,7 @@ export default function BenefitsSection() {
             ].map((text, index) => (
               <li key={index} className="flex items-start">
                 <div className="flex-shrink-0 mr-3 mt-1 w-6 h-6">
-                  <Image src="/caritas.svg" alt="Carita sonriente" width={24} height={24} className="w-6 h-6" />
+                  <Image src="/caritas.svg" alt="Carita sonriente" width={24} height={24} className="w-6 h-6  hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out" />
                 </div>
                 <p dangerouslySetInnerHTML={{ __html: text }} />
               </li>

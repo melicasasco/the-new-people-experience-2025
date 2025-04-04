@@ -40,7 +40,7 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white py-4 px-6 md:px-12 sticky top-0 z-50 shadow-sm">
-      <div className="max-w-5xl mx-auto flex justify-between items-center">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center hover-scale">
           <Image
             src="/be-logo.svg"
@@ -89,7 +89,7 @@ export default function Header() {
                 HOME
               </a>
             </li>
-            <li className="relative" ref={menuRef}>
+            <li className="relative">
               <button
                 onClick={toggleCampaignsMenu}
                 className="font-medium hover:text-[#b48cd4] flex items-center"
@@ -102,6 +102,7 @@ export default function Header() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
+                  viewBox="0 0 24 24" 
                 >
                   <path d="m6 9 6 6 6-6" />
                 </svg>

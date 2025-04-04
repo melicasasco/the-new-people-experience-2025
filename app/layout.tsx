@@ -15,11 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <head>
+      <link rel="icon" href="/favicon.png" /></head>
+      <body>
+        {children}</body>
     </html>
   )
 }
 
-
-
-import './globals.css'
