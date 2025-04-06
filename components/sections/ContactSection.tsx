@@ -7,7 +7,7 @@ export default function ContactSection() {
     <section id="contact">
       <div className="bg-white pt-8 h-fit w-full mt-8 mx-auto">
         <div className="w-full mx-auto  px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-12 items-start ">
             {/* Lado izquierdo - Título y logo */}
             <div className="flex flex-col md:ml-[80px]">
               <div className="mb-12">

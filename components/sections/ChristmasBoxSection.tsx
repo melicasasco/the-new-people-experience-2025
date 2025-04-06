@@ -1,8 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function ChristmasBoxSection() {
+  const isMobile = useIsMobile();
   return (
     <section id="christmas-box" className=" overflow-hidden">
       <div className="w-full mx-auto shadow-md">
@@ -65,7 +67,7 @@ export default function ChristmasBoxSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8 }}
-             className="relative w-full h-full min-h-[500px]"
+             className={!isMobile ? "relative w-full h-full min-h-[500px] flex items-center justify-center" : "relative w-full h-full min-h-[350px]"}
             >
               <Image
                 src="/navidad-mockup.svg"

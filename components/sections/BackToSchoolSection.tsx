@@ -1,8 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function BackToSchoolSection() {
+const isMobile = useIsMobile();
   return (
     <section id="back-to-school" className=" overflow-hidden">
       <div className="w-full mx-auto bg-[#b48cd4]">
@@ -16,7 +18,7 @@ export default function BackToSchoolSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
-             className="relative w-full h-[600px]  "
+             className={!isMobile ? "relative w-full h-[600px] flex items-center justify-center" : "relative w-full h-[400px]"}
           >
               <Image
                 src="/vuelta-al-cole-mockup.svg"

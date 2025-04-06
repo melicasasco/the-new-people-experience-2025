@@ -14,8 +14,8 @@ export default function HeroSection() {
         }}
       >
   
-        <div className="mb-8 md:pl-[110px] pl-4 mt-[12rem] ">
-          <p className="font-normal text-regular font-poppins text-[22px] pl-1">
+        <div className="mb-8 md:pl-[110px] pl-4 mt-[10rem] ">
+          <p className="font-normal text-regular font-poppins text-[20px] md:text-[27px] pl-1">
             Diseñamos la
           </p>
           <Image

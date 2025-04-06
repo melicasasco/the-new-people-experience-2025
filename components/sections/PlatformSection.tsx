@@ -1,8 +1,18 @@
 import Image from "next/image"
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 
 export default function PlatformSection() {
+  const isMobile = useIsMobile();
+  const backgroundStyle = !isMobile
+  ? {
+      backgroundImage: 'url("/bg-plataforma-beneficios-3.svg")',
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }
+  : {};
   return (
     <section className=" relative overflow-hidden">
       <div className="w-full mx-auto">
@@ -61,13 +71,8 @@ export default function PlatformSection() {
           </div>
 
           <div
-            className="h-[600px] p-8 flex items-center justify-center"
-            style={{
-              backgroundImage: 'url("/bg-plataforma-beneficios-3.svg")',
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
+            className="md:h-[600px] h-fit p-8 flex items-center justify-center"
+            style={backgroundStyle}
           >
             {/* Laptop mockup */}
             <motion.div
@@ -75,14 +80,14 @@ export default function PlatformSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8 }}
-                  className="relative z-10 w-full max-w-md mx-auto md:mr-[100px]"
+                  className="relative z-10 w-full mx-auto md:mr-[100px]"
                 >
               <Image
-                src="/mockup-plataforma-de-beneficios.svg"
+                src="/mockup-plataforma-2.svg"
                 alt="Plataforma de beneficios en laptop"
                 width={600}
                 height={400}
-                className="w-[900px] h-auto hover-lift hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
+                className="md:w-[1000px] h-auto hover-lift hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
               />
             </motion.div>
           </div>

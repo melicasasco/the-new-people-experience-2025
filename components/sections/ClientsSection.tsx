@@ -31,7 +31,7 @@ export default function ClientsSection() {
 
        <div className="overflow-hidden relative bg-[#FAFAF8] mt-4">
                   <div
-                    className="flex pt-4 pb-1 whitespace-nowrap animate-scroll"
+                    className="flex py-4  whitespace-nowrap animate-scroll"
                     style={{ width: "max-content" }}
                   >
                     {/* Repetimos la misma imagen varias veces para que el scroll sea fluido */}

@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function LunchSection() {
+  const isMobile = useIsMobile();
   return (
     <section id="lunch" className="overflow-hidden ">
       <div className="w-full  shadow-md">
@@ -13,20 +15,20 @@ export default function LunchSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
-            className="relative w-full h-[600px] "
+            className={!isMobile ? "relative w-full h-[670px] flex items-center justify-center" : "relative  h-[400px] "}
           >
 
              <Image
               src="/lunchh.svg"
               alt="LOS ALMUERZOS"
               fill
-              className="object-cover object-left  "
+              className="object-cover object-left h-full "
               />
              </motion.div>
 
           {/* Right side - Content */}
           <div
-             className="bg-[#333333] text-white h-[600px] px-4 flex flex-col justify-center"
+             className="bg-[#333333] text-white h-[670px] px-4 flex flex-col justify-center"
             >
             <motion.div
               initial={{ opacity: 0, x: 80 }}
@@ -64,7 +66,7 @@ export default function LunchSection() {
                 </p>
               </div>
 
-              <div className="flex justify-center w-full mb-8">
+              <div className="flex justify-center mt-4 w-full mb-8">
                 <Link
                   href="/lunch"
                   className="font-matahari inline-block border border-white rounded-full mb-4 px-6 pt-2 pb-1  hover:bg-white hover:text-[#333333] transition-colors hover-scale md:text-[22px] text-[16px]"

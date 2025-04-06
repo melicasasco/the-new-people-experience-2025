@@ -1,8 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function BirthdaySection() {
+const isMobile = useIsMobile();
   return (
     <section id="birthday" className="">
       <div className="max-w-full mx-auto shadow-md">
@@ -52,13 +54,13 @@ export default function BirthdaySection() {
             </div>
           </motion.div>
 
-          <div className="bg-teal-400 md:h-[600px] flex items-center justify-center">
+          <div className={isMobile ? "bg-teal-400 h-fit flex items-center justify-center" : "bg-teal-400 md:h-[600px] flex items-center justify-center md:justify-end"}>
               <motion.div
                 initial={{ opacity: 0, x: 80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8 }}
-                className="relative w-full h-[600px] flex items-center justify-center"
+                className="relative w-full  flex items-center justify-center"
               >
                 <Image
                   src="/cumples-mockup-v2.svg"
