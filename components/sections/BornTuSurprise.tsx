@@ -41,7 +41,7 @@ export default function BornTuSurprise() {
         {/* Content Section */}
         <motion.div
           variants={containerVariants}
-          className="flex-1 w-full lg:w-1/2 md:p-8 p-4 lg:p-12 xl:p-16 relative z-10"
+          className="flex-1 w-full lg:w-1/2 md:p-8 p-4 mt-4 md:mt-0 lg:p-12 xl:p-16 relative z-10"
         >
           {/* Title */}
           <motion.div

@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative md:h-[550px] h-[400px]  overflow-hidden bg-white flex md:items-center items-end md:justify-start justify-end md:py-16 py-8  px-4 sm:px-8 lg:px-20"
+      className="relative md:h-[550px] h-[400px]  overflow-hidden bg-white flex md:items-center items-end md:justify-start md:py-16 py-8  px-4 sm:px-8 lg:px-20"
       style={{
         backgroundImage: 'url("/fondo-hero.svg")',
         backgroundSize: "cover",

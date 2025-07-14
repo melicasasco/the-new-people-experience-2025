@@ -16,7 +16,7 @@ export default function ContactSection() {
                   alt="CONTACTANOS"
                   width={500}
                   height={150}
-                  className="w-[340px] object-contain hover-scale"
+                  className="w-[440px] object-contain hover-scale"
                 />
               </div>
             </div>
