@@ -85,7 +85,7 @@ export default function BenefitsToChoose() {
             alt="Plataforma de beneficios en laptop"
             width={600}
             height={400}
-            className="w-full max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] h-auto hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
+            className="sm:w-[500px] md:w-[1200px] w-full max-w-[900px] lg:max-w-[600px] xl:max-w-[700px] h-auto hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
           />
         </motion.div>
       </motion.div>

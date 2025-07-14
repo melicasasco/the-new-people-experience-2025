@@ -38,7 +38,7 @@ export default function HeroSection() {
               transition: { duration: 0.8, ease: "easeOut" },
             },
           }}
-          className="text-[20px]  md:ml-1 md:mt-[50px] md:ml-[60px] md:text-[27px] font-normal leading-none font-poppins text-black"
+          className="text-[20px]  md:ml-1 md:mt-[50px] md:ml-[60px] md:text-[27px] font-normal leading-[1.5] font-poppins text-black"
         >
           Diseñamos la
         </motion.p>
@@ -86,7 +86,7 @@ export default function HeroSection() {
           }}
           className="text-[20px] md:ml-[60px] md:text-[27px] md:ml-1 font-normal leading-snug font-poppins text-black"
         >
-          de forma significativa y con{" "}
+          con sentido, valor e{" "}
           <span className="relative inline-block ">
             impacto real
             <Image

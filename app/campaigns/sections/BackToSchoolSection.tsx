@@ -50,7 +50,7 @@ const isMobile = useIsMobile();
                   className="w-[340px] object-contain hover-scale  hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
                   />
                   <span className="flex justify-start">
-                    <Image src="/little-star.svg" alt="start" width={15} height={100} className="w-full object-contain w-[16px] mt-4 ml-[-15px]" />
+                    <Image src="/little-star.svg" alt="start" width={15} height={100} className="w-full object-contain md:w-[16px] w-[10px] mt-4 ml-[-15px]" />
                   </span>
               </div>
 

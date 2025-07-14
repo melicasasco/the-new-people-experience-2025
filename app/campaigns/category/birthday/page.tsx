@@ -6,18 +6,6 @@ import { useRouter } from "next/navigation"
 export default function BirthdayTrendsPage() {
   const router = useRouter()
 
-  const handleBack = () => {
-    // Navegar a la página principal
-    router.push("/")
-
-    // Dar tiempo para que la página se cargue y luego desplazarse a la sección
-    setTimeout(() => {
-      const section = document.getElementById("birthday")
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" })
-      }
-    }, 100)
-  }
 
   return (
     <main className="min-h-screen bg-white">
@@ -25,7 +13,7 @@ export default function BirthdayTrendsPage() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-8">
         <div className="">
           <button
-            onClick={handleBack}
+            onClick={() => router.back()}
             className="inline-flex items-center text-black hover:text-gray-700 transition-colors"
           >
             <ArrowLeft className="mr-2 h-5 w-5" />

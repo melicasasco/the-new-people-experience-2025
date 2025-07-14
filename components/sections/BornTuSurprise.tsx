@@ -48,7 +48,7 @@ export default function BornTuSurprise() {
             variants={itemVariants}
             className="mb-8 lg:mb-12 pb-2 pt-4 px-4 w-fit bg-[#1A1A1A]"
           >
-            <h1 className="md:text-[50px] text-[30px] text-nowrap text-white font-matahari font-bold flex items-center justify-center leading-none">
+            <h1 className="md:text-[60px] text-[30px] text-nowrap text-white font-matahari font-bold flex items-center justify-center leading-none">
               BORN TO SURPRISE.
             </h1>
           </motion.div>
@@ -71,7 +71,7 @@ export default function BornTuSurprise() {
           >
             <Button
               onClick={() => { router.push('/bornToSurprise') }}
-              className="text-black border-black"
+              className="text-black border-black w-[200px] md:w-[200px] md:text-[22px] text-[14px]"
             >
               INSPO KITS
             </Button>

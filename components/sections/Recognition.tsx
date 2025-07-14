@@ -75,7 +75,7 @@ export default function BenefitsSection() {
                     >
                         <Button
                             onClick={() => { router.push('/recognition') }}
-                            className="text-black border-black w-[100px] md:w-[150px] md:text-[22px] text-[14px]"
+                            className="text-black border-black  px-8 py-2 md:w-[200px] md:text-[22px] text-[14px]"
                         >
                             VER MÁS
                         </Button>
