@@ -221,6 +221,8 @@ export default function Header() {
                 { path: "/campaigns", label: "Beneficios flex" },
                 { path: "/kits", label: "Kits Onboarding" },
                 { path: "/recognition", label: "Campañas de Reco" },
+                { path: "/bornToSurprise", label: "Cultura en kits" },
+                { path: "/platform", label: "Plataforma de incentivos" },
               ].map(({ path, label }) => (
                 <button
                   key={path}
