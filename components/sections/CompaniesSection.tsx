@@ -7,16 +7,13 @@ export default function CompaniesSection() {
     <div className="w-full mx-auto">
       <section className="py-12 bg-[#1A1A1A] text-white">
         <div className="mx-auto">
-          <div className="flex justify-center mb-10">
-            <Image
-              src="/empresas-nos-eligen.svg"
-              alt="Empresas nos eligen"
-              width={300}
-              height={100}
-              className="w-full object-contain h-12"
-              priority
-            />
-          </div>
+          
+          <div className="flex justify-center relative w-fit mx-auto md:mb-10 mb-5">
+          <h1 className="text-center font-matahari md:text-[40px] text-[25px] font-black">EMPRESAS QUE NOS ELIGEN
+            <span className="flex justify-end absolute right-0">
+              <Image src="/underline-yellow.svg" alt="underline" width={10} height={10} className="object-contain md:w-[200px] w-[100px] " />
+            </span>
+            </h1></div>
 
           <div className="overflow-hidden relative">
             <div
