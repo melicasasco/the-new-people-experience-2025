@@ -60,7 +60,7 @@ export default function ContactForm() {
         }
       console.log(data,'data form')
         // 1️⃣ Enviar email con Formsubmit
-        fetch("https://formsubmit.co/ajax/hello@beinspiringtools.com", {
+        fetch("https://formsubmit.co/ajax/hello@bepeopleexperience.com", {
           method: "POST",
           body: formData,
         })

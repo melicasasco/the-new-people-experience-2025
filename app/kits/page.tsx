@@ -5,9 +5,13 @@ import kitsData from "../data/kitsData.json";
 import SayHello from "./components/SayHello";
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import { useSectionTracking } from "@/hooks/use-section-tracking";
 
 export default function KitsPage() {
   const router = useRouter();
+  const sayHelloRef = useSectionTracking({ sectionName: "kits_say_hello" });
+  const kitsRef = useSectionTracking({ sectionName: "kits_content" });
+
   return (
     <>
       <button
@@ -16,8 +20,10 @@ export default function KitsPage() {
         <ArrowLeft className="mr-2 h-5 w-5" />
         Volver
       </button>
-      <SayHello />
-      <div className=" mt-2 md:mt-0 mb-4">
+      <div ref={sayHelloRef}>
+        <SayHello />
+      </div>
+      <div ref={kitsRef} className=" mt-2 md:mt-0 mb-4">
         {kitsData.map((kit, idx) => (
           <KitsTemplate
             key={idx}

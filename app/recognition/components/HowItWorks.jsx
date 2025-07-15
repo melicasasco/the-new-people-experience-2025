@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useSectionTracking } from "@/hooks/use-section-tracking";
 
 const containerVariants = {
   hidden: {},
@@ -21,8 +22,11 @@ const itemVariants = {
 };
 
 export default function HowItWorks() {
+  const sectionRef = useSectionTracking({ sectionName: "how_it_works" });
+
   return (
     <section
+      ref={sectionRef}
       className="bg-white h-fit  py-12 md:py-20"
       style={{
         backgroundImage: 'url("/how-it-works-bg.svg")',

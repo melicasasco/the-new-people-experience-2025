@@ -5,9 +5,13 @@ import KitsTemplate from './components/KitsTemplate'
 import kitsData from '@/app/data/bornToSurpriseKits.json'
 import { ArrowLeft } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import { useSectionTracking } from "@/hooks/use-section-tracking"
 
 export default function BornToSurprise() {
   const router = useRouter()
+  const introRef = useSectionTracking({ sectionName: "born_to_surprise_intro" });
+  const kitsRef = useSectionTracking({ sectionName: "born_to_surprise_kits" });
+
   return (
     <div>
             <button
@@ -16,8 +20,10 @@ export default function BornToSurprise() {
         <ArrowLeft className="mr-2 h-5 w-5" />
         Volver
       </button>
-      <Intro />
-      <div className=" mt-2 md:mt-0 mb-4">
+      <div ref={introRef}>
+        <Intro />
+      </div>
+      <div ref={kitsRef} className=" mt-2 md:mt-0 mb-4">
         {kitsData.map((kit, idx) => (
           <KitsTemplate
             key={idx}
