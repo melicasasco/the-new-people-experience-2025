@@ -46,11 +46,11 @@ const KitsTemplate = ({
         {/* Columna Izquierda */}
         <motion.div
           variants={containerVariants}
-          className="flex flex-col justify-center flex-1 bg-white px-8 py-12 md:px-12 xl:px-16"
+          className="flex flex-col md:w-1/2 w-full justify-center flex-1 bg-white"
         >
           <motion.h1
             variants={itemVariantsLeft}
-            className="text-5xl font-black text-black leading-tight mb-2 md:ml-12 ml-0"
+            className="text-5xl px-8 md:py-12 md:pt-0 pt-8 md:px-12 xl:px-16 font-black text-black leading-tight mb-2 md:ml-12 ml-0"
           >
             <Image
               src={title}
@@ -63,7 +63,7 @@ const KitsTemplate = ({
 
           <motion.ul
             variants={containerVariants}
-            className="mt-4 space-y-2 md:ml-12 ml-0 font-poppins md:text-[20px] text-[14px]"
+            className="mt-4 space-y-2 px-8 pb-8 md:pb-0   md:px-12 xl:px-16 md:ml-12 ml-0 font-poppins md:text-[20px] text-[14px]"
           >
             {items.map((item, idx) => (
               <motion.li
@@ -89,15 +89,15 @@ const KitsTemplate = ({
         {/* Columna Derecha */}
         <motion.div
           variants={itemVariantsRight}
-          className="flex flex-col items-center flex-1 justify-center bg-[#FFFC8A] relative p-8 md:p-12 xl:p-16"
+          className="flex flex-col md:w-1/2 items-center flex-1 justify-center bg-[#FFFC8A] relative "
         >
           <Image
             src={kitImage}
             alt="Kit Image"
             width={400}
             height={400}
-            className="w-full h-auto object-contain max-w-[500px] md:max-w-[600px] xl:max-w-[700px] hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
-          />
+            className="w-[1000px] object-cover hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
+            />
         </motion.div>
       </motion.div>
     </section>
