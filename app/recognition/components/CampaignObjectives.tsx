@@ -24,7 +24,7 @@ export default function CampaignObjectives() {
   return (
     <>
       <section
-        className="bg-white h-fit md:h-[650px] py-16 "
+        className="bg-white h-fit md:h-[650px] py-16 md:px-8 px-4 "
         style={{
           backgroundImage: 'url("/bg-objetivos.svg")',
           backgroundSize: "cover",
@@ -46,7 +46,7 @@ export default function CampaignObjectives() {
               alt="El reconocimiento tiene impacto"
               width={600}
               height={100}
-              className="object-contain hover:scale-105 transition-transform duration-300 ease-out"
+              className="object-contain md:w-[600px] w-[600px] hover:scale-105 transition-transform duration-300 ease-out"
             />
           </motion.div>
 

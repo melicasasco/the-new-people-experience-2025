@@ -69,7 +69,7 @@ export default function LunchSection() {
               <div className="flex justify-center mt-4 w-full mb-8">
                 <Link
                   href="/campaigns/category/lunch"
-                  className="font-matahari font-black inline-block border border-white rounded-full mb-4 px-6 pt-2 pb-1  hover:bg-white hover:text-[#333333] transition-colors hover-scale md:text-[22px] text-[16px]"
+                  className="font-matahari font-black inline-block border border-white rounded-full md:mb-4 mb-0 px-6 pt-2 pb-1  hover:bg-white hover:text-[#333333] transition-colors hover-scale md:text-[22px] text-[16px]"
                 >
                   + INFO SOBRE LA CAMPAÑA
                 </Link>
