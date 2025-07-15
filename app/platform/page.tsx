@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Intro from './components/Intro'
 import PlatformLayout from './components/PlatformLayout'
