@@ -46,9 +46,9 @@ export default function BornTuSurprise() {
           {/* Title */}
           <motion.div
             variants={itemVariants}
-            className="mb-8 lg:mb-12 pb-2 pt-4 px-4 w-fit bg-[#1A1A1A]"
+            className="mb-8 lg:mb-12 mx-auto md:mx-0 pb-2 pt-4 px-4 w-fit bg-[#1A1A1A]"
           >
-            <h1 className="md:text-[60px] text-[30px] text-nowrap text-white font-matahari font-bold flex items-center justify-center leading-none">
+            <h1 className="md:text-[60px] text-[30px]  text-nowrap text-white font-matahari font-bold flex items-center justify-center leading-none">
               BORN TO SURPRISE.
             </h1>
           </motion.div>
@@ -58,7 +58,7 @@ export default function BornTuSurprise() {
             variants={itemVariants}
             className="mb-8 lg:mb-12 max-w-2xl"
           >
-            <p className="font-bold font-matahari md:text-[30px] text-[20px]">
+            <p className="font-bold font-matahari text-center md:text-[30px] pt-4 text-[20px]">
               Más que kits:<br />
               cultura que se siente.
             </p>

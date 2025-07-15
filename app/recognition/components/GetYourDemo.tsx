@@ -68,7 +68,7 @@ export default function GetYourDemo() {
       </motion.div>
       <motion.div variants={itemVariants} className="flex justify-center items-center md:mt-24 mt-12">
           <button
-            onClick={() => router.push("#contact")}
+            onClick={() => router.push("/#contact")}
             className="bg-white font-black font-matahari text-black border-2 border-black px-8 pb-3 py-4 rounded-full hover:bg-black hover:text-white transition-all duration-300 ease-out hover:scale-105 text-[16px] md:text-[20px]"
           >
             SOLICITÁ TU DEMO
