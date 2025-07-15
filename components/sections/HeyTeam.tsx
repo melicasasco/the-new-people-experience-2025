@@ -96,7 +96,7 @@ export default function HeyTeam() {
           <motion.div variants={itemVariants} className="flex justify-center mt-8">
             <Button
               className="text-white border-white"
-              onClick={() => { router.push('/') }}
+              onClick={() => { router.push('/platform') }}
             >
               LA PLATAFORMA
             </Button>
