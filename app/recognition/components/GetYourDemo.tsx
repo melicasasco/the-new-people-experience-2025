@@ -27,7 +27,7 @@ export default function GetYourDemo() {
 
   return (
     <section
-      className="relative w-full bg-white py-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative w-full bg-white md:py-16 py-4 px-4 sm:px-6 lg:px-8 overflow-hidden"
       style={{
         backgroundImage: 'url("/demo-bg.svg")',
         backgroundSize: "cover",
@@ -66,7 +66,7 @@ export default function GetYourDemo() {
         {/* Botón */}
        
       </motion.div>
-      <motion.div variants={itemVariants} className="flex justify-center items-center mt-24">
+      <motion.div variants={itemVariants} className="flex justify-center items-center md:mt-24 mt-12">
           <button
             onClick={() => router.push("/demo")}
             className="bg-white font-black font-matahari text-black border-2 border-black px-8 pb-3 py-4 rounded-full hover:bg-black hover:text-white transition-all duration-300 ease-out hover:scale-105 text-[16px] md:text-[20px]"

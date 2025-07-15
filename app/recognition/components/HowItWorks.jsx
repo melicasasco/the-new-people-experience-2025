@@ -23,7 +23,7 @@ const itemVariants = {
 export default function HowItWorks() {
   return (
     <section
-      className="bg-white h-fit md:px-4 md:px-6 px-4 lg:px-8 py-12 md:py-20"
+      className="bg-white h-fit  py-12 md:py-20"
       style={{
         backgroundImage: 'url("/how-it-works-bg.svg")',
         backgroundSize: "cover",
@@ -32,7 +32,7 @@ export default function HowItWorks() {
       }}
     >
       <motion.div
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-12 gap-8 items-start md:px-5 px-4"
+        className=" mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-12 gap-8 items-start "
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -49,7 +49,7 @@ export default function HowItWorks() {
               alt="¿Cómo funciona la propuesta?"
               width={500}
               height={500}
-              className="w-[280px] md:w-[400px] object-contain"
+              className="w-[280px] md:ml-[80px] ml-6 md:w-[400px] object-contain"
             />
           </motion.div>
 
@@ -58,7 +58,7 @@ export default function HowItWorks() {
             variants={itemVariants}
             className="text-gray-900 text-[14px] md:text-[16px] leading-relaxed max-w-2xl"
           >
-            <p className="font-bold mb-2 md:text-[18px] text-[16px] md:my-8 my-4 flex items-center gap-2 mb-6 md:mb-6">
+            <p className="font-bold md:ml-[80px] ml-6 mb-2 md:text-[18px] text-[16px] md:my-8 my-4 flex items-center gap-2 mb-6 md:mb-6">
               <Image
                 src="/triangle-bullet.svg"
                 alt="bullet point"
@@ -68,9 +68,9 @@ export default function HowItWorks() {
               />
               Reconocimientos que se ven, que se sienten.
             </p>
-            <p>
+            <p className="md:ml-[80px] ml-6">
               Usamos{" "}
-              <span className="font-bold">pines como símbolo visible</span> del
+              <span className="font-bold ">pines como símbolo visible</span> del
               reconocimiento. Cada pin representa un valor, una actitud o una
               acción destacada.
             </p>
@@ -78,7 +78,7 @@ export default function HowItWorks() {
 
           <motion.div
             variants={itemVariants}
-            className="text-gray-900 text-[14px] md:text-[16px] leading-relaxed max-w-2xl"
+            className="text-gray-900 md:ml-[80px] ml-6 text-[14px] md:text-[16px] leading-relaxed max-w-2xl"
           >
             <p className="font-bold mb-2 md:text-[18px] text-[16px] md:my-8 my-4 flex items-center gap-2 mb-6 md:mb-6">
               <Image
@@ -86,7 +86,7 @@ export default function HowItWorks() {
                 alt="bullet point"
                 width={16}
                 height={16}
-                className="md:mt-1 mb-1 md:mb-0 md:w-5 md:h-5"
+                className="md:mt-1  mb-1 md:mb-0 md:w-5 md:h-5"
               />
               Plataforma digital, simple y abierta.
             </p>
@@ -109,7 +109,7 @@ export default function HowItWorks() {
 
           <motion.div
             variants={itemVariants}
-            className="text-gray-900 text-[14px] md:text-[16px] leading-relaxed max-w-2xl"
+            className="text-gray-900 md:ml-[80px] ml-6 text-[14px] md:text-[16px] leading-relaxed max-w-2xl"
           >
             <div className="flex items-start gap-2">
               <Image
@@ -150,14 +150,14 @@ export default function HowItWorks() {
         {/* RIGHT COLUMN: Mockup */}
         <motion.div
           variants={itemVariants}
-          className="flex justify-center items-start w-full h-full overflow-hidden"
+          className="flex justify-end items-start w-full h-full overflow-visible relative "
         >
           <Image
-            src="/como-funciona-mockup.svg"
+            src="/como-funciona-mockup2.svg"
             alt="Mockup de la propuesta"
             width={600}
             height={500}
-            className="h-auto object-contain md:w-[900px] md:right-[-40px] right-[-20px] absolute w-[300px] "
+            className="h-auto object-contain w-[800px] md:w-[1500px] lg:w-[1800px] xl:w-[2000px] 2xl:w-[2200px] hover:scale-105 transition-all duration-300 ease-in-out"
           />
         </motion.div>
       </motion.div>

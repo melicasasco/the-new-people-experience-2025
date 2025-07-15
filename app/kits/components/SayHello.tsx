@@ -1,7 +1,5 @@
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { useRouter } from "next/navigation"
 
 const containerVariants = {
     hidden: {},
@@ -18,7 +16,6 @@ const itemVariants = {
 };
 
 export default function SayHello() {
-    const router = useRouter()
     return (
         <section className="md:h-[700px] h-fit bg-[#1A1A1A] flex items-center justify-center px-4 sm:px-6 lg:px-8"
             style={{
@@ -32,14 +29,14 @@ export default function SayHello() {
             >
                 {/* Content Section */}
                 <motion.div
-                    className="flex-1 w-full lg:w-1/2  p-4 "
+                    className="flex-1 w-full lg:w-1/2 mt-12 md:mt-0   p-4 "
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.7 }}
                     >
                     {/* Título */}
-                    <motion.div variants={itemVariants} className="mb-4 lg:mb-8">
+                    <motion.div variants={itemVariants} className="mb-4  lg:mb-8">
                         <Image
                             src="/say-hello-black.svg"
                             alt="SAY HELLO"

@@ -41,7 +41,7 @@ const isMobile = useIsMobile();
               className="flex flex-col md:items-start items-center"
              
             >
-              <div className="mb-8 bg-[#b48cd4]  md:px-[90px]">
+              <div className="mb-2 bg-[#b48cd4]  md:px-[90px]">
                 <Image
                   src="/vuelta-al-cole-title.svg"
                   alt="LA VUELTA AL COLE"
@@ -50,7 +50,7 @@ const isMobile = useIsMobile();
                   className="w-[340px] object-contain hover-scale  hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
                   />
                   <span className="flex justify-start">
-                    <Image src="/little-star.svg" alt="start" width={15} height={100} className="w-full object-contain md:w-[16px] w-[10px] mt-4 ml-[-15px]" />
+                    <Image src="/little-star.svg" alt="start" width={15} height={100} className="w-full object-contain md:w-[16px] mt-4 mb-1 w-[10px]  ml-[-15px]" />
                   </span>
               </div>
 

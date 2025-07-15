@@ -26,7 +26,7 @@ export default function Intro() {
     const isMobile = useIsMobile()
   return (
     <section
-      className="relative w-full bg-white py-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative w-full bg-white pt-16 md:pb-16 pb-4 px-4 sm:px-6 lg:px-8 overflow-hidden"
       style={{
         backgroundImage: isMobile ? 'none' : 'url("/borntosurprise-bg.svg")',
         backgroundSize: "cover",
