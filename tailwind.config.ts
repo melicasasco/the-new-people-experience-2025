@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         matahari: ['MatahariCondensed', 'sans-serif'],
+        'matahari-condensed': ['MatahariCondensed', 'sans-serif'],
       },
       colors: {
         background: "hsl(var(--background))",

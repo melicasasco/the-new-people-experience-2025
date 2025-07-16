@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
+  const router = useRouter();
   const [showCampaignsMenu, setShowCampaignsMenu] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLLIElement>(null); 
@@ -17,6 +19,12 @@ export default function Header() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+    setShowCampaignsMenu(false);
+  };
+
+  const handleNavigation = (path: string) => {
+    router.push(path);
+    closeMobileMenu();
     setShowCampaignsMenu(false);
   };
 
@@ -85,16 +93,19 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex space-x-8 text-[16px] font-poppins">
             <li>
-              <a href="#hero" className="font-medium hover:text-[#b48cd4]">
+              <button 
+                onClick={() => handleNavigation("/")}
+                className="font-medium hover:text-[#b48cd4]"
+              >
                 HOME
-              </a>
+              </button>
             </li>
-            <li className="relative">
+            <li className="relative" ref={menuRef}>
               <button
                 onClick={toggleCampaignsMenu}
                 className="font-medium hover:text-[#b48cd4] flex items-center"
               >
-                CAMPAÑAS
+                SERVICIOS
                 <svg
                   className="ml-1"
                   width="16"
@@ -111,30 +122,31 @@ export default function Header() {
               {showCampaignsMenu && (
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md py-2 z-50">
                   {[
-                    { href: "#birthday", label: "Los Cumpleaños" },
-                    { href: "#lunch", label: "Los Almuerzos" },
-                    { href: "#births", label: "Los Nacimientos" },
-                    { href: "#childrens-day", label: "Día de la Infancia" },
-                    { href: "#christmas-box", label: "La Caja Navideña" },
-                    { href: "#back-to-school", label: "La Vuelta al Cole" },
-                  ].map(({ href, label }) => (
-                    <a
-                      key={href}
-                      href={href}
-                      className="block px-4 py-2 text-sm hover:bg-gray-100"
-                      onClick={() => setShowCampaignsMenu(false)}
+                    { path: "/campaigns", label: "Beneficios flex" },
+                    { path: "/kits", label: "Kits Onboarding" },
+                    { path: "/recognition", label: "Campañas de Reco" },
+                    { path: "/bornToSurprise", label: "Cultura en kits" },
+                    { path: "/platform", label: "Plataforma de incentivos" },
+                  ].map(({ path, label }) => (
+                    <button
+                      key={path}
+                      onClick={() => handleNavigation(path)}
+                      className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
                     >
                       {label}
-                    </a>
+                    </button>
                   ))}
                 </div>
               )}
             </li>
 
             <li>
-              <a href="#contact" className="font-medium hover:text-[#b48cd4]">
+              <button 
+                onClick={() => handleNavigation("/#contact")}
+                className="font-medium hover:text-[#b48cd4]"
+              >
                 CONTACTO
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -179,19 +191,18 @@ export default function Header() {
 
         {/* Links de navegación */}
         <div className="flex flex-col px-6 text-[16px] font-poppins">
-          <a
-            href="#hero"
-            onClick={closeMobileMenu}
-            className="py-2 font-medium hover:text-[#b48cd4]"
+          <button
+            onClick={() => handleNavigation("/")}
+            className="py-2 font-medium hover:text-[#b48cd4] text-left"
           >
             HOME
-          </a>
+          </button>
 
           <button
             onClick={toggleCampaignsMenu}
             className="py-2 font-medium hover:text-[#b48cd4] flex items-center justify-between"
           >
-            CAMPAÑAS
+            SERVICIOS
             <svg
               className="ml-2"
               width="16"
@@ -207,32 +218,29 @@ export default function Header() {
           {showCampaignsMenu && (
             <div className="ml-4 mt-2 space-y-1">
               {[
-                { href: "#birthday", label: "Los Cumpleaños" },
-                { href: "#lunch", label: "Los Almuerzos" },
-                { href: "#births", label: "Los Nacimientos" },
-                { href: "#childrens-day", label: "Día de la Infancia" },
-                { href: "#christmas-box", label: "La Caja Navideña" },
-                { href: "#back-to-school", label: "La Vuelta al Cole" },
-              ].map(({ href, label }) => (
-                <a
-                  key={href}
-                  href={href}
-                  className="block py-1 text-sm hover:text-[#b48cd4]"
-                  onClick={closeMobileMenu}
+                { path: "/campaigns", label: "Beneficios flex" },
+                { path: "/kits", label: "Kits Onboarding" },
+                { path: "/recognition", label: "Campañas de Reco" },
+                { path: "/bornToSurprise", label: "Cultura en kits" },
+                { path: "/platform", label: "Plataforma de incentivos" },
+              ].map(({ path, label }) => (
+                <button
+                  key={path}
+                  onClick={() => handleNavigation(path)}
+                  className="block w-full text-left py-1 text-sm hover:text-[#b48cd4]"
                 >
                   {label}
-                </a>
+                </button>
               ))}
             </div>
           )}
 
-          <a
-            href="#contact"
-            onClick={closeMobileMenu}
-            className="py-2 font-medium hover:text-[#b48cd4]"
+          <button
+            onClick={() => handleNavigation("/#contact")}
+            className="py-2 font-medium hover:text-[#b48cd4] text-left"
           >
             CONTACTO
-          </a>
+          </button>
         </div>
       </div>
     </header>

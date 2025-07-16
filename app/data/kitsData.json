@@ -1,0 +1,58 @@
+[
+  {
+    "title": "/first-coffee-title.svg",
+    "items": [
+      "Caja craft personalizada",
+      "Postal de bienvenida",
+      "Botella Dairy",
+      "Gift card primer café",
+      "Cuaderno A5",
+      "Cinta lanyard"
+    ],
+    "kitImage": "/first-coffee.svg"
+  },
+  {
+    "title": "/first-friday-title.svg",
+    "items": [
+      "Botella flumen",
+      "Porta notebook",
+      "Mochila Haus",
+      "Daily Action Planner",
+      "Postal con QR",
+      "Pines"
+    ],
+    "kitImage": "/first-friday-kit.svg"
+  },
+  {
+    "title": "/lunch-time-title.svg",
+    "items": [
+      "Lunchera Chilly",
+      "Botella Atuel",
+      "Porta cepillos",
+      "Lunchera Bamboo"
+    ],
+    "kitImage": "/lunch-time-kit.svg"
+  },
+  {
+    "title": "/bolso-team-deporte-title.svg",
+    "items": [
+      "Cinta lanyard",
+      "Bolso Pampero",
+      "Daily Action Planner",
+      "Botella Olympia",
+      "Toalla Deportiva",
+      "Muñequeras toalla"
+    ],
+    "kitImage": "/bolso-team-deporte-kit.svg"
+  },
+  {
+    "title": "/trend-box-title.svg",
+    "items": [
+      "Box",
+      "Planner 17x24cm",
+      "Vaso Thermo",
+      "Bolígrafo con stickers"
+    ],
+    "kitImage": "/trend-box-kit.svg"
+  }
+]
