@@ -22,6 +22,9 @@ export const useSectionTracking = ({ sectionName, threshold = 0.3 }: UseSectionT
                 page_path: window.location.pathname,
                 timestamp: new Date().toISOString()
               });
+              
+              // Debug log
+              console.log('✅ Section tracked:', sectionName, 'on page:', window.location.pathname);
             }
             
             // Also track as a custom event
