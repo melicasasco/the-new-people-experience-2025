@@ -3,21 +3,21 @@
       "title": "CATÁLOGO MULTIPREMIOS CONFIGURABLE",
       "question": null,
       "subtitle": "Giftcards, experiencias, productos físicos, Merchandising corporativo.",
-      "image": "catalogo-multipremios.svg",
+      "image": "/catalogo-multipremios.svg",
       "hasBullet": false
     },
     {
         "title": "PERSONALIZACIÓN TOTAL DE CAMPANAS",
         "question": null,
         "subtitle": "Nos alineamos a la lógica de cada campaña según valores, objetivos, programas de incentivos comerciales.",
-        "image": "PERSONALIZACION-CAMPANAS.gif",
+        "image": "/PERSONALIZACION-CAMPANAS.gif",
         "hasBullet": false
       },
       {
         "title": "FÁCIL IMPLEMENTACIÓN",
         "question": null,
         "subtitle": "Plataforma intuitiva y multidispositivo. Gestión 100% tercerizada: desde la consultoría creativa, curaduría de premios y hasta la gestión de entregas.", 
-        "image": "facil-implementacion.svg",
+        "image": "/facil-implementacion.svg",
         "hasBullet": true
       },
       {
