@@ -43,13 +43,13 @@ export default function HeyTeam() {
           className="flex-1 w-full lg:w-1/2 p-8 lg:p-12 xl:p-16 relative z-10"
         >
           <motion.div variants={itemVariants} className="mb-8 lg:mb-12">
-            <Image
+            {/* <Image
               src="/HEYTEAM.svg"
               alt="HEY TEAM"
               width={500}
               height={150}
               className="max-w-[300px] w-[250px] md:w-[300px] lg:max-w-[640px] object-contain hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
-            />
+            /> */}
           </motion.div>
 
           <motion.h1
@@ -68,37 +68,37 @@ export default function HeyTeam() {
           </motion.h2>
 
           {[
-            { text: "actitud,", underline: "/underline.svg" },
-            { text: "foco,", underline: "/underline.svg" },
-            { text: "constancia,", underline: "/underline2.svg" },
-            { text: "impacto.", underline: "/underline.svg" },
+            { text: ">> actitud,"},
+            { text: ">> foco,"},
+            { text: ">> constancia,",},
+            { text: ">> impacto."},
           ].map((item, index) => (
             <motion.h3
               key={index}
               variants={itemVariants}
-              className="relative w-fit md:text-[28px] text-[20px] text-white leading-relaxed font-matahari font-bold"
+              className="relative w-fit md:text-[28px] py-2 text-[20px] text-white leading-relaxed font-matahari font-bold"
             >
               <span className="relative inline-block">
                 {item.text}
-                <span className="absolute left-0 bottom-0 w-full h-[8px]">
+                {/* <span className="absolute left-0 bottom-0 w-full h-[8px]">
                   <Image
                     src={item.underline}
                     alt="underline"
                     fill
                     className="object-cover"
                   />
-                </span>
+                </span> */}
               </span>
             </motion.h3>
           ))}
 
           {/* Button */}
-          <motion.div variants={itemVariants} className="flex justify-center mt-8">
+          <motion.div variants={itemVariants} className="flex justify-start mt-8">
             <Button
               className="text-white border-white"
               onClick={() => { router.push('/platform') }}
             >
-              LA PLATAFORMA
+              VER MÁS
             </Button>
           </motion.div>
         </motion.div>

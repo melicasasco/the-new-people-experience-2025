@@ -29,7 +29,7 @@ const Intro = () => {
   return (
     <section
       style={{
-        backgroundImage: 'url("/platform-intro-bg.svg")',
+        backgroundImage: 'url("/platform-incentivos-bg-2.svg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

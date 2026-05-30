@@ -44,7 +44,7 @@ export default function PlatformSection() {
                 />
               </div>
 
-              <div className="bg-yellow-300 inline-block px-3 py-2 mb-8 mt-8">
+              <div className="bg-[#F7E86B] inline-block px-3 py-2 mb-8 mt-8">
                 <p className="font-bold font-matahari md:text-[26px] py-1 text-[16px] leading-relaxed">Multidispositivo, multicampañas</p>
               </div>
 
@@ -83,7 +83,7 @@ export default function PlatformSection() {
                   className="relative z-10 w-full mx-auto md:mr-[100px]"
                 >
               <Image
-                src="/mockup-plataforma-2.svg"
+                src="/mockup-plataforma-4.svg"
                 alt="Plataforma de beneficios en laptop"
                 width={600}
                 height={400}

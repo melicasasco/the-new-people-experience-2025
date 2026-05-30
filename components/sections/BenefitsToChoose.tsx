@@ -27,13 +27,13 @@ export default function BenefitsToChoose() {
 
   return (
     <section
-      className="h-fit md:h-[650px] flex items-center justify-center md:py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
-      style={{
-        backgroundImage: 'url("/benefits-to-choose-bg.svg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="h-fit md:h-[650px] flex items-center justify-center md:py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-[#FAFAF8]"
+      // style={{
+      //   backgroundImage: 'url("/benefits-to-choose-bg.svg")',
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat",
+      // }}
     >
       <motion.div
         className="flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl mx-auto relative overflow-hidden"

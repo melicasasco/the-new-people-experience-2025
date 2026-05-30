@@ -61,7 +61,7 @@ export default function BenefitsSection() {
               />
             </motion.div>
 
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-3xl mx-auto md:ml-20 md:mr-auto">
 
               {/* Subtítulo */}
               <motion.p

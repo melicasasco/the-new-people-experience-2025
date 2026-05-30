@@ -42,7 +42,7 @@ export default function CampaignObjectives() {
           {/* TÍTULO CENTRADO ARRIBA */}
           <motion.div variants={itemVariants} className="flex justify-start ">
             <Image
-              src="/objetivos-title.svg"
+              src="/objetivos-title-yellow.svg"
               alt="El reconocimiento tiene impacto"
               width={600}
               height={100}
@@ -60,7 +60,7 @@ export default function CampaignObjectives() {
               {/* Bloque 1 */}
               <motion.p
                 variants={itemVariants}
-                className="font-bold bg-orange-500 text-black inline-block px-2 py-1 md:text-[18px] text-[16px] w-fit md:mr-16 mr-0"
+                className="font-bold bg-[#F7E86B] text-black inline-block px-2 py-1 md:text-[18px] text-[16px] w-fit md:mr-16 mr-0"
               >
                 Instalar una cultura de reconocimiento genuina, cercana y cotidiana.
               </motion.p>
@@ -74,7 +74,7 @@ export default function CampaignObjectives() {
               {/* Bloque 2 */}
               <motion.p
                 variants={itemVariants}
-                className="font-bold bg-orange-500 text-black inline-block px-2 py-1 md:text-[18px] text-[16px]"
+                className="font-bold bg-[#F7E86B] text-black inline-block px-2 py-1 md:text-[18px] text-[16px]"
               >
                 Valorar lo positivo en el otro y hacerlo visible.
               </motion.p>
@@ -91,7 +91,7 @@ export default function CampaignObjectives() {
               {/* Bloque 3 */}
               <motion.p
                 variants={itemVariants}
-                className="font-bold bg-orange-500 text-black inline-block px-2 py-1 md:text-[18px] text-[16px] md:mr-20 mr-0"
+                className="font-bold bg-[#F7E86B] text-black inline-block px-2 py-1 md:text-[18px] text-[16px] md:mr-20 mr-0"
               >
                 Impulsar el reconocimiento horizontal, público y sin jerarquías.
               </motion.p>
@@ -105,7 +105,7 @@ export default function CampaignObjectives() {
               {/* Bloque 4 */}
               <motion.p
                 variants={itemVariants}
-                className="font-bold bg-orange-500 text-black inline-block px-2 py-1 md:text-[18px] text-[16px] md:mr-16 mr-0"
+                className="font-bold bg-[#F7E86B] text-black inline-block px-2 py-1 md:text-[18px] text-[16px] md:mr-16 mr-0"
               >
                 Alinear cada reconocimiento con los valores y el propósito de la organización.
               </motion.p>

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
@@ -31,9 +30,9 @@ export default function ImpactRecognition() {
   return (
     <>
     <div style={{
-      backgroundImage: isMobile ? 'none' : 'url("/impact-recognition-bg.svg")',
+      backgroundImage: 'url("/impact-recognition-bg-2.svg")',
       backgroundSize: "cover",
-      backgroundPosition: "center",
+      backgroundPosition: isMobile ? "38% center" : "center",
       backgroundRepeat: "no-repeat",
       height: isMobile ? 'auto' : '650px',
     }}  >
@@ -45,9 +44,9 @@ export default function ImpactRecognition() {
         Volver
       </button>
 
-      <section className="md:h-[650px] md:mt-14 mt-4 items-center h-fit  px-4 sm:px-6 lg:px-8">
+      <section className="md:h-[560px] md:mt-8 mt-4 flex items-center min-h-[560px] md:min-h-0 px-4 sm:px-6 lg:px-8 py-12 md:py-0">
         <motion.div
-          className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 items-center"
+          className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-4 items-center"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
@@ -56,35 +55,34 @@ export default function ImpactRecognition() {
           {/* LEFT: TEXT COLUMN */}
           <motion.div
             variants={containerVariants}
-            className=" md:ml-[40px] ml-0"
+            className="lg:col-start-2 max-w-[680px] text-white"
           >
-            <motion.div variants={itemVariants}>
-              <Image
-                src="/el-reconocimiento-tiene-impacto.svg"
-                alt="El reconocimiento tiene impacto"
-                width={500}
-                height={500}
-                className="w-full max-w-[600px] object-contain  mt-0"
-              />
-            </motion.div>
+            <motion.h1
+              variants={itemVariants}
+              className="font-matahari font-bold leading-none md:text-[64px] text-[40px]"
+            >
+              EL RECONOCIMIENTO
+              <br />
+              TIENE IMPACTO
+            </motion.h1>
 
             <motion.p
               variants={itemVariants}
-              className="bg-black text-white font-matahari font-bold md:text-[20px] text-[16px] px-4 pb-2 pt-3 inline-block"
+              className="bg-[#F4BACA] text-white font-matahari font-bold md:text-[24px] text-[18px] px-3 pb-1 pt-2 inline-block mt-5"
             >
               NOS UNE, NOS FORTALECE Y SOSTIENE LA CULTURA.
             </motion.p>
 
             <motion.div
               variants={itemVariants}
-              className="space-y-4 text-gray-800 max-w-2xl py-4"
+              className="space-y-5 max-w-[620px] pt-7"
             >
-              <p className="font-semibold md:text-[20px] text-[16px] my-4 pb-4">
+              <p className="font-poppins font-semibold md:text-[24px] text-[18px] leading-relaxed">
                 Cuando alguien se siente reconocido:
                 <br />
                 Confía más. Participa más. Contagia actitud.
               </p>
-              <p className="md:text-[18px] text-[14px]">
+              <p className="font-poppins md:text-[20px] text-[16px] leading-relaxed">
                 Reconocer es darle lugar a lo que importa.
                 <br />
                 Diseñamos programas auténticos, cotidianos y sin jerarquías.
@@ -96,20 +94,6 @@ export default function ImpactRecognition() {
           </motion.div>
 
           {/* RIGHT: IMAGE COLUMN */}
-          <motion.div
-            variants={itemVariants}
-            className="flex md:justify-end justify-center items-center w-full h-full"
-          >
-            <div className="w-full max-w-[500px] h-auto flex justify-center md:justify-end md:pb-0 pb-10">
-              <Image
-                src="/impact-recognition-pines.svg"
-                alt="Imagen de pines"
-                width={500}
-                height={500}
-                className="md:w-[400px] w-[200px] h-auto object-contain"
-              />
-            </div>
-          </motion.div>
         </motion.div>
       </section></div>
     </>

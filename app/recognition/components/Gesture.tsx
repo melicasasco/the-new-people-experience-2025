@@ -42,7 +42,7 @@ export default function Gesture() {
       >
         {/* TOP ROW: Title and Pin Image */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 md:gap-12 gap-2 items-center md:h-[220px] h-full"
+          className="grid grid-cols-1 md:grid-cols-2 md:gap-12 gap-2 items-center md:min-h-[230px] h-full"
         >
           {/* Title */}
           <motion.div variants={itemVariants} className="flex justify-start md:justify-start md:ml-8">
@@ -50,13 +50,13 @@ export default function Gesture() {
           </motion.div>
 
           {/* Pin Image */}
-          <motion.div variants={itemVariants} className="flex justify-center md:justify-center md:mb-9">
+          <motion.div variants={itemVariants} className="flex justify-center py-4 md:py-0 overflow-visible">
             <Image
-              src="/jugar-en-equipo-pin.svg"
+              src="/jugar-en-equipo-pin-2.svg"
               alt="Jugar en equipo: Lo tuyo"
               width={300}
               height={300}
-              className="object-contain w-[180px] md:w-[240px] md:ml-12 md:mb-5"
+              className="object-contain w-[180px] md:w-[240px]"
             />
           </motion.div>
         </motion.div>

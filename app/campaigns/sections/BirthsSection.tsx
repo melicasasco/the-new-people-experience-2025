@@ -66,7 +66,7 @@ export default function BirthsSection() {
             >
           
             <Image
-              src="/nacimientos-mockup.svg"
+              src="/nacimientos-mockup-2.svg"
               alt="LOS NACIMIENTOS"
               fill
               className="object-cover hover-lift"

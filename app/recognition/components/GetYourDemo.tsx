@@ -27,13 +27,13 @@ export default function GetYourDemo() {
 
   return (
     <section
-      className="relative w-full bg-white md:py-16 py-4 px-4 sm:px-6 lg:px-8 overflow-hidden"
-      style={{
-        backgroundImage: 'url("/demo-bg.svg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="relative w-full bg-[#FEB9CD] md:py-16 py-4 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      // style={{
+      //   backgroundImage: 'url("/demo-bg.svg")',
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat",
+      // }}
     >
       <motion.div
         className="max-w-3xl mx-auto flex flex-col items-start justify-center h-full "
@@ -69,7 +69,7 @@ export default function GetYourDemo() {
       <motion.div variants={itemVariants} className="flex justify-center items-center md:mt-24 mt-12">
           <button
             onClick={() => router.push("/#contact")}
-            className="bg-white font-black font-matahari text-black border-2 border-black px-8 pb-3 py-4 rounded-full hover:bg-black hover:text-white transition-all duration-300 ease-out hover:scale-105 text-[16px] md:text-[20px]"
+            className="bg-[#FEB9CD] font-black font-matahari text-black border-2 border-black px-8 pb-3 py-4 rounded-full hover:bg-black hover:text-white transition-all duration-300 ease-out hover:scale-105 text-[16px] md:text-[20px]"
           >
             SOLICITÁ TU DEMO
           </button>

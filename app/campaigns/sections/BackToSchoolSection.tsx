@@ -21,7 +21,7 @@ const isMobile = useIsMobile();
              className={!isMobile ? "relative w-full h-[600px] flex items-center justify-center" : "relative w-full h-[400px]"}
           >
               <Image
-                src="/vuelta-al-cole-mockup.svg"
+                src="/vuelta-al-cole-mockup-2.svg"
                 alt="Tablet con aplicación de vuelta al cole"
                 fill
                 className="object-cover hover-lift"

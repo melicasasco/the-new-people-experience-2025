@@ -28,7 +28,7 @@ const BottomSection = () => {
     <section
       className="w-full px-4 sm:px-6 lg:px-12 overflow-hidden"
       style={{
-        backgroundImage: isMobile ? 'none' : 'url("/bg-final-section.jpg")',
+        backgroundImage: isMobile ? 'none' : 'url("/bg-final-section-2")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -70,13 +70,13 @@ const BottomSection = () => {
           className="flex-1 flex flex-col items-center md:items-start justify-center space-y-6 w-full"
         >
           <p className="font-matahari text-black font-bold md:text-[32px] text-[20px] leading-tight text-center md:text-left">
-            ES <span className="bg-[#FFFF7A] px-2 py-1 rounded-full">ACTIVAR</span> EL COMPROMISO,
+            ES <span className="bg-[#F7E86B] px-2 py-1 rounded-full">ACTIVAR</span> EL COMPROMISO,
           </p>
           <p className="font-matahari text-black font-bold md:text-[32px] text-[20px] leading-tight text-center md:text-left">
-            <span className="bg-[#FFFF7A] px-2 py-1 rounded-full">MULTIPLICAR</span> EL IMPACTO Y
+            <span className="bg-[#F7E86B] px-2 py-1 rounded-full">MULTIPLICAR</span> EL IMPACTO Y
           </p>
-          <p className="font-matahari text-black font-bold md:text-[32px] text-[20px] leading-tight text-center md:text-left">
-            <span className="bg-[#FFFF7A] px-2 rounded-full">RECONOCER</span> LO QUE VERDADERAMENTE <br className="hidden md:block" /> MUEVE A LOS EQUIPOS.
+          <p className="font-matahari text-black font-bold md:text-[32px] text-[20px] leading-tight text-center md:text-left md:-ml-20">
+            <span className="bg-[#F7E86B] px-2 rounded-full">RECONOCER</span> LO QUE VERDADERAMENTE <br className="hidden md:block" /> MUEVE A LOS EQUIPOS.
           </p>
         </motion.div>
       </motion.div>

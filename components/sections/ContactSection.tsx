@@ -5,7 +5,7 @@ import Footer from "../Footer";
 export default function ContactSection() {
   return (
     <section id="contact">
-      <div className="bg-white pt-8 h-fit w-full mt-8 mx-auto">
+      <div className="bg-white pt-8 h-fit w-full mt-16 mx-auto">
         <div className="w-full mx-auto  px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-12 items-start ">
             {/* Lado izquierdo - Título y logo */}

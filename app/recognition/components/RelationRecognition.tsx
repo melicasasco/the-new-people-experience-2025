@@ -25,13 +25,13 @@ export default function RelationRecognition() {
   return (
     <>
       <section
-        className="bg-white h-fit md:h-[650px] px-4 sm:px-6 lg:px-8"
-        style={{
-          backgroundImage: 'url("/relation-recognition-bg.svg")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
+        className="bg-[#F7E86B] h-fit md:h-[650px] px-4 sm:px-6 lg:px-8"
+        // style={{
+        //   backgroundImage: 'url("/relation-recognition-bg.svg")',
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   backgroundRepeat: "no-repeat",
+        // }}
       >
         <motion.div
           className="max-w-7xl  mx-auto grid grid-cols-1 lg:grid-cols-2 md:gap-12 gap-6 items-center "
@@ -57,7 +57,7 @@ export default function RelationRecognition() {
 
             <motion.p
               variants={itemVariants}
-              className="bg-black text-white mt-0 font-matahari font-bold md:text-[20px] text-[16px] md:text-xl px-4 pb-2 pt-3 inline-block"
+              className="bg-black text-white mt-0 font-matahari font-bold md:text-[30px] text-[16px] md:text-xl px-4 pb-2 pt-3 inline-block"
             >
               ES CONSTRUIR RELACIONES DE VALOR.
             </motion.p>
@@ -112,11 +112,11 @@ export default function RelationRecognition() {
             className="flex justify-center items-center  w-full h-full"
           >
             <Image
-              src="/alta-actitud-pin.svg"
+              src="/alta-actitud-pines.svg"
               alt="alta actitud"
               width={500}
               height={500}
-              className="h-auto object-contain md:w-[300px] w-[200px] mx-auto hover:scale-105 transition-transform duration-300 ease-out"
+              className="h-auto object-contain md:w-[400px] w-[200px] mx-auto hover:scale-105 transition-transform duration-300 ease-out"
             />
           </motion.div>
         </motion.div>

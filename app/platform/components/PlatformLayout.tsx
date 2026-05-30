@@ -39,7 +39,7 @@ const itemVariants = {
 };
 
 const PlatformLayout = ({ item, index, reverse }: PlatformLayoutProps) => {
-  const backgroundColor = index % 2 === 0 ? '#FFFF7A' : '#FFFFFF';
+  const backgroundColor = index % 2 === 0 ? '#F7E86B' : '#FFFFFF';
 
   // Render bullets con animación
   const renderBulletedLines = () => {

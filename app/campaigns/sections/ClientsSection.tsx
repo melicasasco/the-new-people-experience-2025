@@ -17,7 +17,7 @@ export default function ClientsSection() {
   }, [])
 
   return (
-    <section className=" mt-4 ">
+    <section className=" mt-8 ">
       <div className="w-full mx-auto  h-fit">
         <div className="flex justify-center mt-3">
           <Image
