@@ -31,37 +31,37 @@ export default function BenefitsSection() {
                 className="flex h-full flex-col lg:flex-row items-center justify-between w-full max-w-7xl mx-auto relative z-10 overflow-hidden rounded-2xl"
                 variants={containerVariants}
                 initial="hidden"
-                animate="show"
+                whileInView="show"
                 viewport={{ once: true, amount: 0.1 }}
             >
 
                 <motion.div
-                    variants={itemVariants}
-                    className="flex-1 w-full lg:w-1/2 md:p-8 p-4 lg:p-12 xl:p-16 relative z-10"
+                    variants={containerVariants}
+                    className="flex-1 w-full lg:w-1/2 md:p-8 p-4 lg:pl-4 lg:pr-28 xl:pl-6 xl:pr-36 relative z-10"
                 >
-                    <div className="mb-8 lg:mb-12">
+                    <motion.div variants={itemVariants} className="mb-8 lg:mb-12">
                         <Image
                             src="/buena-onda.svg"
                             alt="Reconocimiento"
                             width={500}
                             height={150}
-                            className="w-full max-w-[500px] lg:max-w-[640px] object-contain hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
+                            className="w-full max-w-[500px] lg:max-w-[520px] object-contain hover:scale-105 hover:-translate-y-1 transition-transform duration-300 ease-out"
                         />
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div variants={itemVariants}>
                         <p className="text-base sm:text-lg md:pr-[200px] lg:text-xl leading-relaxed text-[#FCF9CA] md:py-2 py-1 md:pr-8">
                         Lo que se reconoce, se repite.
                         Lo que se repite, se vuelve cultura.
                         </p>
-                    </div>
-                    <div className="flex justify-center md:justify-start mt-5 md:mt-8">
+                    </motion.div>
+                    <motion.div variants={itemVariants} className="flex justify-center md:justify-start mt-5 md:mt-8">
                         <Button
                             onClick={() => { router.push('/recognition') }}
                             className="text-[#FBB443] border-[#FCF9CA] bg-[#FCF9CA] px-8 py-2 md:w-[200px] md:text-[22px] text-[14px]"
                         >
                             VER MÁS
                         </Button>
-                    </div>
+                    </motion.div>
                 </motion.div>
 
                 {/* Image Section */}

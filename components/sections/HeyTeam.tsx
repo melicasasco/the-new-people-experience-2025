@@ -61,10 +61,9 @@ export default function HeyTeam() {
 
           <motion.h2
             variants={itemVariants}
-            className="md:text-[30px] text-[20px] text-white leading-relaxed font-matahari font-bold"
+            className="md:text-[30px] text-[20px] text-white leading-relaxed font-poppins"
           >
-            Lo que mueve a los equipos, se impulsa.<br />
-            Visibilizá los impulsores clave:
+            Visibilizá y premiá lo que realmente importa.
           </motion.h2>
 
           {[
@@ -76,7 +75,7 @@ export default function HeyTeam() {
             <motion.h3
               key={index}
               variants={itemVariants}
-              className="relative w-fit md:text-[28px] py-2 text-[20px] text-white leading-relaxed font-matahari font-bold"
+              className="relative w-fit md:text-[28px] py-2 text-[20px] text-white leading-relaxed font-poppins"
             >
               <span className="relative inline-block">
                 {item.text}

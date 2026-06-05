@@ -44,7 +44,7 @@ export default function ImpactRecognition() {
         Volver
       </button>
 
-      <section className="md:h-[560px] md:mt-8 mt-4 flex items-center min-h-[560px] md:min-h-0 px-4 sm:px-6 lg:px-8 py-12 md:py-0">
+      <section className="md:h-[560px] md:mt-0 mt-4 flex items-start md:items-center min-h-[560px] md:min-h-0 px-4 sm:px-6 lg:px-8 py-12 md:pt-8 md:pb-0">
         <motion.div
           className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-4 items-center"
           variants={containerVariants}
@@ -55,7 +55,7 @@ export default function ImpactRecognition() {
           {/* LEFT: TEXT COLUMN */}
           <motion.div
             variants={containerVariants}
-            className="lg:col-start-2 max-w-[680px] text-white"
+            className="lg:col-start-2 max-w-[680px] text-white md:-translate-y-8"
           >
             <motion.h1
               variants={itemVariants}

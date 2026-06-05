@@ -60,7 +60,7 @@ export default function TangibleCulture() {
                         className="font-poppins text-base sm:text-lg lg:text-xl leading-relaxed mt-10 max-w-[650px]"
                     >
                         Diseñamos piezas brandeadas para cada momento de la experiencia empleado.
-                        Onboarding, reconocimiento, valores y celebraciones — con diseño y propósito real.
+                        <b> Onboarding, reconocimiento, valores y celebraciones</b> con diseño y propósito real.
                     </motion.p>
 
                     <motion.div
@@ -69,7 +69,7 @@ export default function TangibleCulture() {
                     >
                         <Button
                             onClick={() => {
-                                window.location.href = "https://google.com/url?sa=j&url=https%3A%2F%2Fcatalog.bepeopleexperience.com%2Fcultura-tangible&uct=1767030054&usg=dRAsyaIDPg2JlXsfc650j-00sKA.&opi=76390225&source=meet"
+                                window.location.href = "https://catalog.bepeopleexperience.com/cultura-tangible"
                             }}
                             className="bg-black border-black text-[#FFE861] px-10 py-3 md:w-[260px] md:text-[22px] text-[14px]"
                         >

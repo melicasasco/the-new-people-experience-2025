@@ -10,6 +10,14 @@ export default function Header() {
   const [showCampaignsMenu, setShowCampaignsMenu] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLLIElement>(null); 
+  const catalogUrl = "https://catalog.bepeopleexperience.com/cultura-tangible";
+  const serviceLinks = [
+    { path: "/campaigns", label: "Beneficios flex" },
+    // { path: "/kits", label: "Kits Onboarding" },
+    { path: "/recognition", label: "Campañas de Reco" },
+    { path: catalogUrl, label: "Cultura tangible", external: true },
+    { path: "/platform", label: "Plataforma de incentivos" },
+  ];
 
   const toggleCampaignsMenu = () => setShowCampaignsMenu(!showCampaignsMenu);
   const toggleMobileMenu = () => {
@@ -23,6 +31,13 @@ export default function Header() {
   };
 
   const handleNavigation = (path: string) => {
+    if (path.startsWith("http")) {
+      window.location.href = path;
+      closeMobileMenu();
+      setShowCampaignsMenu(false);
+      return;
+    }
+
     router.push(path);
     closeMobileMenu();
     setShowCampaignsMenu(false);
@@ -121,13 +136,7 @@ export default function Header() {
 
               {showCampaignsMenu && (
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md py-2 z-50">
-                  {[
-                    { path: "/campaigns", label: "Beneficios flex" },
-                    { path: "/kits", label: "Kits Onboarding" },
-                    { path: "/recognition", label: "Campañas de Reco" },
-                    { path: "/bornToSurprise", label: "Cultura en kits" },
-                    { path: "/platform", label: "Plataforma de incentivos" },
-                  ].map(({ path, label }) => (
+                  {serviceLinks.map(({ path, label }) => (
                     <button
                       key={path}
                       onClick={() => handleNavigation(path)}
@@ -217,13 +226,7 @@ export default function Header() {
 
           {showCampaignsMenu && (
             <div className="ml-4 mt-2 space-y-1">
-              {[
-                { path: "/campaigns", label: "Beneficios flex" },
-                { path: "/kits", label: "Kits Onboarding" },
-                { path: "/recognition", label: "Campañas de Reco" },
-                { path: "/bornToSurprise", label: "Cultura en kits" },
-                { path: "/platform", label: "Plataforma de incentivos" },
-              ].map(({ path, label }) => (
+              {serviceLinks.map(({ path, label }) => (
                 <button
                   key={path}
                   onClick={() => handleNavigation(path)}
