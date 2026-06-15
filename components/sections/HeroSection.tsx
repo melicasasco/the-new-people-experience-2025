@@ -6,16 +6,16 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative md:h-[550px] h-[400px] overflow-hidden bg-[#FAFAF8] flex md:items-center items-end md:justify-start md:py-16 py-8 px-4 sm:px-8 lg:px-20"
+      className="relative md:h-[650px] h-[400px] overflow-hidden bg-[#FAFAF8] md:bg-[url('/op.png')] bg-cover bg-center bg-no-repeat flex md:items-center items-end md:justify-start md:pt-16  md:pb-1  py-8 px-4 sm:px-8 lg:px-20"
     >
-      <Image
+      {/* <Image
         src="/hero.svg"
         alt=""
         width={934}
         height={447}
         className="pointer-events-none absolute hidden md:block left-[48%] top-[9%] w-[160px] h-auto object-contain"
         aria-hidden="true"
-      />
+      /> */}
       <motion.div
         className="max-w-5xl flex flex-col items-start space-y-1 md:-translate-y-8 relative z-10"
         initial="hidden"
