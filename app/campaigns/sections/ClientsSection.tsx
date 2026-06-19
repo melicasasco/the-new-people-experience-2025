@@ -38,7 +38,7 @@ export default function ClientsSection() {
                     {[...Array(3)].map((_, i) => (
                       <Image
                         key={i}
-                        src="/logos-black-new.png"
+                        src="/logos-black-3.svg"
                         alt={`Carrusel de logos ${i}`}
                         width={1000} // Ajustalo si tu imagen es más grande o más chica
                         height={100}

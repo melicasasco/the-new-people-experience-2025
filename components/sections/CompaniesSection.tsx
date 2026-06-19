@@ -24,7 +24,7 @@ export default function CompaniesSection() {
               {[...Array(3)].map((_, i) => (
                 <Image
                   key={i}
-                  src="/logos-blancos-new.png"
+                  src="/logos-white.svg"
                   alt={`Carrusel de logos ${i}`}
                   width={1000} // Ajustalo si tu imagen es más grande o más chica
                   height={100}

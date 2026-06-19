@@ -56,7 +56,7 @@ const Intro = () => {
       >
         <motion.div
           variants={containerVariants}
-          className="flex flex-col items-start justify-start h-full md:h-[650px] md:ml-[60px] ml-0"
+          className="flex flex-col items-start justify-start h-full md:h-[550px] md:ml-[60px] ml-0"
         >
           <motion.div variants={itemVariants}>
             <Image
@@ -64,7 +64,7 @@ const Intro = () => {
               alt="logo"
               width={400}
               height={400}
-              className="md:w-[300px] w-[200px] mt-16"
+              className="md:w-[300px] w-[200px] mt-24"
             />
           </motion.div>
 
@@ -82,12 +82,12 @@ const Intro = () => {
             Una solución flexible para diseñar campañas de reconocimiento, incentivos y premios a medida, alineadas con los objetivos de cada equipo, cada momento y cada cultura organizacional.
           </motion.p>
 
-          <motion.div
+          {/* <motion.div
             variants={itemVariants}
             className="flex flex-col items-start font-matahari bg-[#FFFF7A] h-fit p-4 justify-start md:text-[24px] text-[14px] mt-16 ml-0"
           >
             LO QUE OFRECE:
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </motion.div>
     </section>
