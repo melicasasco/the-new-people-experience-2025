@@ -42,7 +42,7 @@ export default function ClientsSection() {
                         alt={`Carrusel de logos ${i}`}
                         width={1000} // Ajustalo si tu imagen es más grande o más chica
                         height={100}
-                        className="h-20 w-auto object-contain flex-shrink-0"
+                        className="h-24 md:h-28 w-auto object-contain flex-shrink-0"
                         priority
                       />
                     ))}
@@ -67,4 +67,3 @@ export default function ClientsSection() {
     </section>
   )
 }
-
